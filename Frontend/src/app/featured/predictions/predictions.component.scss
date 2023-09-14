@@ -1,0 +1,378 @@
+.top_screen {
+  width: 100%;
+  height: 235px;
+  top: 95px;
+  position: relative;
+  background-color: #182957 !important;
+}
+
+.alignText>h1 {
+  color: #fff !important;
+  font-family: "MuseoModerno", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.alignText>p {
+  color: #fff !important;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.bgImage {
+  border-top: 1px solid #fff;
+  background-image: url('../../../assets/Mask\ group\ \(3\).png');
+  height: 235px;
+  background-position: center;
+  position: relative;
+  background-color: #805FB3 !important;
+
+}
+
+.alignText {
+  position: absolute;
+  left: 33%;
+  bottom: 5%;
+}
+
+.middle_screen {
+  height: 2580px;
+  background-color: #fff;
+  color: #000;
+}
+
+.para {
+  width: 944px;
+  height: 60px;
+  top: 365px;
+  left: 248px;
+
+}
+
+.text_pred {
+  font-family: Montserrat !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: black;
+}
+
+.first_card {
+  width: 555px;
+  height: 434px;
+  top: 500px;
+  left: 155px;
+  border-radius: 55px
+}
+
+.custom-card {
+  border-radius: 55px;
+  height: 434px;
+}
+
+.heading_card {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.custom_card_nested {
+  border-radius: 21px;
+  // width: 250px;
+  height: 42px;
+  margin-top: 25px;
+}
+
+.text_for_card {
+  font-family: Montserrat !important;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  margin-top: -3px !important;
+}
+
+.custom_card_nested2 {
+  border-radius: 21px;
+  height: 90px;
+  margin-top: 25px;
+}
+
+.text_for_card2 {
+  font-family: Montserrat !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.prediction_number {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #219C6F;
+}
+
+.prediction_today {
+  border-radius: 10px;
+  height: 298px;
+}
+
+.foot {
+  float: left;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.goals {
+  border-radius: 10px;
+  height: 44px;
+}
+
+.data_countries {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+.img_for_goals {
+  position: relative;
+  top: -2px;
+  margin-right: 12px;
+}
+
+.teams {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #182957;
+}
+
+
+.register_today {
+  margin-top: 35px;
+  height: 121px;
+  border-radius: 10px;
+  background-color: #182957;
+}
+
+.register_free_account {
+  background-color: #4D3FA1;
+  width: 357px;
+  height: 51px;
+  border-radius: 10px;
+  margin-top: 17px;
+  margin-left: 100px;
+}
+
+.text_foot {
+  font-family: Montserrat !important;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.text_foot2 {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.free_account {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.filter {
+  justify-content: space-between;
+
+  li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.key_stats {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-left: 290px;
+}
+
+.key_stats_para {
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 16px;
+  word-wrap: break-word
+}
+
+.stats_sub {
+  width: 160px;
+  height: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  padding-right: 30px;
+  left: 111px;
+  top: 0px;
+  position: absolute;
+  background: #E8EAEF;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex
+}
+
+.stats_sub1 {
+  padding-left: 27px;
+  padding-right: 29px;
+  left: 296px;
+}
+
+.stats_sub2 {
+  padding-left: 24px;
+  padding-right: 26px;
+  left: 481px;
+}
+
+.title_stats {
+  text-align: center;
+  color: #182957;
+  font-size: 12px;
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 12px;
+  word-wrap: break-word
+}
+
+.img1 {
+  width: 25px;
+  height: 25px;
+  left: 36px;
+  top: 38px;
+  position: absolute
+}
+
+.img2 {
+  top: 72px
+}
+
+.percentage_stats {
+  width: 160px;
+  height: 19px;
+  left: 111px;
+  top: 47px;
+  position: absolute;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  display: inline-flex;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.percentage_stats2 {
+  left: 296px;
+  top: 47px;
+}
+
+.percentage_stats3 {
+  left: 481px;
+  top: 47px;
+}
+
+.percentage_stats4 {
+  left: 111px;
+  top: 81px;
+  border-bottom: 1px solid #219C6F
+}
+
+.percentage_stats5 {
+  left: 297px;
+  top: 81px;
+  border-bottom: 1px solid #219C6F
+}
+
+.percentage_stats6 {
+  left: 481px;
+  top: 81px;
+  border-bottom: 1px solid #219C6F
+}
+
+.points {
+  text-align: center;
+  color: black;
+  font-size: 12px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 12px;
+  word-wrap: break-word
+}
+
+.border-1 {
+  width: 96px;
+  height: 31px;
+  left: 0px;
+  top: 35px;
+  position: absolute;
+  background: white;
+  border-radius: 7px;
+  border: 0.50px #E8EAEF solid
+}
+
+.border-2 {
+  width: 96px;
+  height: 31px;
+  left: 0px;
+  top: 69px;
+  position: absolute;
+  background: white;
+  border-radius: 7px;
+  border: 0.50px #E8EAEF solid
+}

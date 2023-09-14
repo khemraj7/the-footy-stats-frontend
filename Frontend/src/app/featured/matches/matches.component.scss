@@ -1,0 +1,261 @@
+.top_screen {
+  width: 100%;
+  height: 235px;
+  top: 95px;
+  position: relative;
+  background-color: #182957 !important;
+}
+
+.alignText>h1 {
+  color: #fff !important;
+  font-family: "MuseoModerno", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.alignText>p {
+  color: #fff !important;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.bgImage {
+  background-image: url("../../../assets/Mask\ group\ \(3\).png");
+  height: 235px;
+  background-position: center;
+  position: relative;
+  background-color: #805FB3 !important;
+}
+
+.alignText {
+  position: absolute;
+  left: 33%;
+  bottom: 5%;
+}
+
+section {
+  margin: 10px 0;
+}
+
+.section2 {
+  width: 1130px;
+  height: 360px;
+  top: 437px;
+  left: 155px;
+  border-radius: 25px;
+  background: #fafbfc;
+}
+
+.FiXtures {
+  font-family: Montserrat !important;
+  font-size: 48px;
+  font-weight: 100 !important;
+  line-height: 59px;
+  letter-spacing: 0em;
+  text-align: center !important;
+}
+
+.FiXtures>p {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.FiXtures>p>span {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.cardData {
+  width: 121px;
+  height: 132px;
+  background: #604786;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cardData>.profitable {
+  // width: 121px
+  font-family: Montserrat;
+
+  position: absolute;
+  height: 29px;
+  top: 10px;
+  border-radius: 6px;
+  background: #805FB3;
+  text-align: center;
+  left: -7px;
+  width: 135px;
+}
+
+.cardContainer {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding: 2px 31px;
+}
+
+.cardContainer::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  overflow-y: scroll;
+  background: grey;
+  box-shadow: inset 0 0 4px #707070;
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+  background: #805FB3;
+  border-radius: 10px;
+}
+
+.arrow {
+  height: 0px;
+  width: 0px;
+  border: 8px solid;
+  background-color: #182957;
+  transform: rotate(-90 deg);
+  width: 13.00000000000001px;
+  height: 12.00000000000001px;
+  top: 3.5px;
+  left: 16px;
+}
+
+.cardData>.profitableData {
+  position: absolute;
+  top: 44px;
+  text-align: center;
+  /* left: 23px; */
+  height: 80px;
+  width: 121px;
+}
+
+.cardData>.profitableData>.money {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 9px 0;
+  color: #3bbf8f;
+}
+
+.cardData>.profitableData>.time {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.cardData>.profitableData>.goals {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.limitedSearch>span {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.filters {
+  float: right;
+
+  li {
+    list-style: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+}
+
+.progressData {
+  text-align: end;
+  width: 590px;
+
+  .progress_filter {
+    background: #F6F6F6;
+    padding: 10px;
+    border-radius: 5px;
+
+  }
+
+  select {
+    border-radius: 5px;
+    word-wrap: normal;
+    width: 243px;
+    height: 34px;
+    border: none;
+    margin: 0 10px;
+
+  }
+
+  button {
+    border: none;
+  }
+}
+
+.sort_teams {
+  text-align: end;
+  margin-left: 64px;
+
+  span {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: right;
+    padding: 0 10px;
+  }
+}
+
+.progress_report {
+  height: auto;
+  padding: 10px;
+}
+
+.col-6 {
+  padding: 0 3px;
+}
+
+.hh {
+  // position: relative;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  // line-height: 12px;
+  letter-spacing: 0em;
+  text-align: center;
+  // text-align: center;
+  width: 152px;
+  border-right: 1px solid #fff;
+  height: 22px;
+  margin: 0 auto;
+}

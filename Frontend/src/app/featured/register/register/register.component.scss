@@ -1,0 +1,86 @@
+* {
+
+  background-color: #262626 !important;
+}
+
+form {
+  width: 479px;
+  height: 617px;
+  flex-shrink: 0;
+  border-radius: 27px;
+  opacity: 0.5;
+  background: rgba(196, 196, 196, 0.10);
+  backdrop-filter: blur(30px);
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  opacity: 1;
+
+
+}
+
+div {
+  text-align: -webkit-center;
+}
+
+svg {
+  width: 643.005px;
+  height: 644.317px;
+  flex-shrink: 0;
+  fill: #FEC0C0;
+  mix-blend-mode: overlay;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.fill-blank {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.input_fields {
+  margin: 0 30px;
+}
+
+.label_fields {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  // letter-spacing: 0em;
+  float: left;
+  color: #FFF;
+
+}
+.mat-mdc-raised-button .mat-mdc-button-touch-target{
+  background-color: white;
+}
+
+.mdc-text-field--outlined .mdc-notched-outline {
+  background: #C9C9C91A;
+}
+.img_login{
+  position: absolute
+}
+.btn_submit{
+  background-color: #805FB3 !important ;
+   color: #ffffff !important;
+   height: 50px; 
+   width: 87% !important;
+}

@@ -1,0 +1,74 @@
+*{
+
+  background-color: #262626 !important;
+}
+form {
+    width: 479px;
+    height: 411px;
+    flex-shrink: 0;
+    border-radius: 27px;
+    opacity: 0.5;
+    background: rgba(196, 196, 196, 0.10);
+    backdrop-filter: blur(30px);
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    opacity: 1;
+  }
+  
+  .label_fields {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    float: left;
+    color: #FFF;
+    margin-top: 20px;
+  }
+  div {
+    text-align: -webkit-center;
+  }
+  
+  svg {
+    width: 643.005px;
+    height: 644.317px;
+    flex-shrink: 0;
+    fill: #FEC0C0;
+    mix-blend-mode: overlay;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  h1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
+  .fill-blank {
+    color: #FFF;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .container{
+    width: 1440px;
+    height: 88.4vh;
+  top: 95px
+  
+  }
+  .login{
+    padding-top: 80px;
+  }
+  .img_login{
+    position: absolute
+  }

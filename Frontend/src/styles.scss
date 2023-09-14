@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700");
+
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #FFFFFF;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+ul,
+li,
+td,
+tr,
+a,
+input,
+.label_fields {
+  font-family: Montserrat !important;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+  // color: #FFFFFF;
+
+
+}
+
+
+.mdc-notched-outline {
+  border: 1px solid #c9c9c9cc !important;
+  border-radius: 5px !important;
+}
+
+
+.mat-mdc-input-element::placeholder {
+  color: #fff !important;
+}
+
+.mdc-text-field__input {
+  color: #fff !important;
+  position: absolute !important;
+    left: 54px!important;
+    top: 13px!important;
+width: 80% !important;
+}
+
+
+
+.mdc-tab-indicator--active{
+  background-color: #805FB3 !important;
+  border-radius: 5px;
+  .mdc-tab__text-label{
+    color: #fff !important;
+  }
+  }
+  .mdc-tab-indicator{
+    display: none !important;
+  }
+  
+  .mdc-tab__text-label{
+    color: #000 !important;
+  }

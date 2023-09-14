@@ -1,0 +1,80 @@
+<div style="height: 850px;" *ngIf="!loader">
+  <img style="position: fixed; bottom: 0; right: 0;" src="../../../../assets/sideFootball.png" alt="">
+  <div class="container ">
+    <div class="col-12 d-flex">
+      <div class="col-6 align-self-center">
+        <img src="../../../../assets/regf.png" alt="" style="width: 92%;">
+      </div>
+      <div class="col-6 mt-3">
+        <h1 class="text-center">
+          Registration
+        </h1>
+        <p class="fill-blank">Fill in this form to Register</p>
+        <form [formGroup]="form" class="p-3" (ngSubmit)="onSubmit()">
+
+          <div class="mt-4 input_fields ">
+            <mat-label class="label_fields">Username</mat-label>
+            <mat-form-field appearance="outline">
+              <img src="../../../../assets/ph_user-bold (1).png" alt="" class="img_login">
+              <input matInput type="text" placeholder="Enter username" formControlName="username">
+              <mat-error *ngIf=" form.controls['username'].hasError('required')">Username is required and must be at least 8 characters long.
+              </mat-error>
+              <mat-error *ngIf=" form.controls['username'].hasError('invalid')">Username already exists .
+              </mat-error>
+              <!-- <mat-error *ngIf="form.controls['username'].touched && form.controls['username'].hasError('required')">Username is required and must be at least 8 characters long.
+              </mat-error> -->
+            </mat-form-field>
+          </div>
+          <div class="mt-4 input_fields">
+            <mat-label class="label_fields">Email</mat-label>
+            <mat-form-field appearance="outline">
+              <img src="../../../../assets/uil_lock.png" alt="" class="img_login">
+
+              <input matInput type="text" placeholder="Enter email" formControlName="email">
+              <mat-error *ngIf="form.controls['email'].hasError('required')">email is required .
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="mt-4 input_fields">
+            <mat-label class="label_fields">Password</mat-label>
+            <mat-form-field appearance="outline">
+              <img src="../../../../assets/uil_lock.png" alt="" class="img_login">
+              <input matInput type="text" placeholder="Enter Password" formControlName="password">
+              <mat-error *ngIf="form.controls['password'].hasError('required')">Password is required .
+              </mat-error>
+              <mat-error  *ngIf="form.controls['password'].hasError('minlength')">Password should be at least 6 characters long.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="mt-4 input_fields">
+            <mat-label class="label_fields">Confirm Password</mat-label>
+            <mat-form-field appearance="outline">
+              <img src="../../../../assets/uil_lock.png" alt="" class="img_login">
+              <input matInput type="text" placeholder="Enter Confirm password" formControlName="confirm">
+              <mat-error *ngIf="form.controls['confirm'].hasError('required') ">Confirm Password is required
+              </mat-error>
+               <mat-error *ngIf="form.hasError('passwordMismatch') && form.get('confirm').touched">Passwords do not match
+              </mat-error>
+             
+            </mat-form-field>
+          </div>
+          <div>
+            <br>
+            <button class=" btn_submit" mat-raised-button type="submit">Submit</button>
+          </div>
+
+
+          <p class="mt-2">already account ? <a routerLink="/login">Login</a> </p>
+        </form>
+
+        <button class="mt-2 text-center" style="color: #ccc;" (click)="googleLogin()">Or Continue with Google</button>
+        <button class="mt-2 text-center" style="color: #ccc;" (click)="fbUser()">Or Continue with Facebook</button>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div *ngIf="facebookHtml" [innerHTML]="facebookHtml"></div>
+<app-loader *ngIf="loader"></app-loader>
