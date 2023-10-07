@@ -1,20 +1,42 @@
+<app-loader *ngIf="loader"></app-loader>
 <div *ngIf="!loader">
-<div class="top_sceen">
-  <div class="bgImage">
-    <div class="alignText">
-      <h1>
-        Stats and Insight
-      </h1>
+  <div class="top_sceen">
+    <div class="bgImage">
+      <div class="alignText">
+        <h1>
+          Stats and Insight
+        </h1>
 
-      <p>
-        Lorem ipsum dolor sit amet.
-      </p>
+        <p>
+          Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="col-12 completedFixture mt-3 mb-3">
+      <img src="../../../../assets/bx_stats.svg" alt=""> &nbsp; <span>Team Statistics</span>
     </div>
 
-  </div>
-</div>
+    <div id="sportmonks-widget" data-widget="league-team-stats"
+      data-info="PE9avRTh0Y4ssGsb0Nab0+ANYg23+cayY5Xht2lubAlPi4qma9/KqG/R125wlz7/saMkI1S576O+M+vbxWL7v77iU3b5V+QBz4bj+GNw6LqpMMEW5Sg6ky++7r0YlBRHKGVzGehlcam3Y+yd2PPYvNvg727jUJ980u3+WpayHqrHb4I+p0H+1TMCNwCmkJMAH3sw1a2Rh1zKK1dIdIoPFZIol0VsuxcnI9F6goyWQMDaMzIcLCrNNkxQJ1Bqev2NO4ArguA+lIcPzZpfuRGc0L3xUCWmERJa4dVopcNPVAHW3N8pYU/lSKDhidCI4NORALDK3dULmxTORPki1/zGgUtW8tfieaolLxPXFmMo5LjrvOTPJ1WARqusBjEYj9iE2jPjoi7naTc5/ufqfKEcahXPXSZRGAaY11jfippXOn5xmJoawoUKYbi8M/4oHBnrzom0GNnZpk9rVkFK81Zh7TVjX3vPaKAffE+1T158Ub6S74vjo0mAesk/q8PYErJdzXS+QEAdympvnFc/FkROKEXhwJAck0llIGbIVxKvH7Otv6mlXASAeTRBCZGFz6TIoL4+Qcko+W2a26CNvDLiMvTK1gPGKEkDGTePdq1+YMO6NVc4XpB0ypO7by5XsmfvwRsd06ZPmgouYvH/U+HCLwy6CiMZ4QgvCcfhhXwmFUs="
+      data-league="72" data-colors="#805FB3,#182957,#D0D0D9,#343353"></div>
 
-<div class="middle_screen container">
+    <div class="col-12 completedFixture mt-3 mb-3">
+      <img src="../../../../assets/bx_stats.svg" alt=""> &nbsp; <span>Player Statistics</span>
+    </div>
+
+    <div id="sportmonks-widget" data-widget="league-topscorers"
+      data-info="KsUMhSlzxqh0eZZmQPpjvRsZeEwZAbcFXzdQdoxf3Y3CMtEg8nQkG7zhmgWEssPziedel4732sxLKHRs7fjVjNYVxc467Pwfimr4hM3a0/ZDVMGbwG2l3adEX2nUe8LknmP4HkqGJ76HIeUsHoAOR0W0usyxyRQyiomWv98IIf++byPNrIJiZYveDA0MidEL4lTbvMBrjVLpasC39NY+DeQJlQzlyiIj38xRegBuZ5RyWU19tQJMmAn6FQ831UsczqbfXRqXGYyL3chihq+2KLJtEqbQCkSfNfpwzE7wBdJOkV/t9TSwXhjVoVaoQW39OHQTcxnjhT3npSK65HIwla+tMv8lskTOyRCfv0GWmuSCMcGFD3DCR/YfdzFZ74rfQ+dHxO//FOceR/bbFFNebI8TbW7uMWOj0K6sl7X2jQVuugs9tTvyTDiJ8geg5B8X7igC6UiIMQ5/xiLt2dJFIrUoKySJ/LcBqerEf2f0Lxl8I5YDjTg1k/321VxXpZbQ3yzUJd5/7K1Cge3soVCsOJOvhfZ8D7DfiWsgq2dhd/dX2zTZQklLRabUxq99vVjCvMFjHzg6WW23R3CfY+ylSh5FCM5HjGkZ17geMXlXa4ewva4Ge9Y8/KUL+d34lvOLz10CyOgbFNmIdOsFvbzPnHYLUjzg2GNTsKzLJpGNWyQ="
+      data-league="72" data-colors="#805FB3,#182957,#D0D0D9,#343353"></div>
+  </div>
+
+
+
+  <!-- <div class="middle_screen container">
 
   <p>Find teams by their performance in each
     football betting statistics such as Over
@@ -155,7 +177,6 @@
                     </div>
                   </mat-panel-title>
                    <mat-panel-description>
-                    <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
 
                   </mat-panel-description>
                 </mat-expansion-panel-header>
@@ -170,7 +191,7 @@
 
   </section>
 </div>
-</div>
-<app-loader *ngIf="loader"></app-loader>
+</div> -->
 
-<app-footer></app-footer>
+
+  <app-footer></app-footer>

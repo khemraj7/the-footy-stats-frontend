@@ -259,3 +259,24 @@ section {
   height: 22px;
   margin: 0 auto;
 }
+.completedFixture {
+  display: inline-flex;
+  // padding: 0px 210.5px 0px 211.5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #DDDFE6;
+  background: #F6F6F6;
+  height: 40px;
+  width: 100%;
+
+  span {
+    color: #182957;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}

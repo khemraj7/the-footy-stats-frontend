@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { ScriptService } from 'src/app/service/script.service';
 
 @Component({
   selector: 'app-stats',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatsComponent implements OnInit {
 
-  statsArray: any = [ 'Both Teams to Score (BTTS)', 'Clean Sheets', 'xG', 'Correct Scores', '1st Half and 2nd Half Goals', 'Scored in Both Halves', 'Over 2.5 Goals', 'Corner Stats', 'Win Draw Win', 'Penalties', 'Offsides', 'Under 2.5 Goals', 'Yellow and Red Cards', 'Home Advantage' ]
+  statsArray: any = ['Both Teams to Score (BTTS)', 'Clean Sheets', 'xG', 'Correct Scores', '1st Half and 2nd Half Goals', 'Scored in Both Halves', 'Over 2.5 Goals', 'Corner Stats', 'Win Draw Win', 'Penalties', 'Offsides', 'Under 2.5 Goals', 'Yellow and Red Cards', 'Home Advantage']
 
-  cardsCount: any = [1,2,3,4,5,6,7,8]
+  cardsCount: any = [1, 2, 3, 4, 5, 6, 7, 8]
 
   statsCardArr: any = [
     {
@@ -83,19 +84,52 @@ export class StatsComponent implements OnInit {
   //   { line6: 'Campeonato de Futbol Femenino' }]
   // }]
 
-  checkEvent:string="Today";
+  checkEvent: string = "Today";
   panelOpenState = false;
-  customCssClass:string='abhi';
+  customCssClass: string = 'abhi';
   days: any = ['Yesterday', 'Today', 'Tomorrow', 'Monday', 'Tuesday', 'Wednesday', 'Thrusday']
-  loader: boolean=false;
+  loader: boolean = false;
 
-  constructor() {}
+  constructor(private renderer: Renderer2,
+    private scriptService: ScriptService) { }
 
   ngOnInit(): void {
-    this.loader=true
+    this.loader = true
     setTimeout(() => {
       this.loader = false
-    }, 1000);
+    }, 2000);
+
   }
 
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.teamStats()
+      this.playerStats()
+    }, 2000);
+
+  }
+
+  teamStats() {
+    const scriptElement = this.scriptService.loadJsScript(this.renderer, "https://widgets.sportmonks.com/js/league/teamStats.js");
+
+    scriptElement.onload = () => {
+      console.log('Google API Script loaded', scriptElement);
+
+    }
+    scriptElement.onerror = () => {
+      console.log('Could not load the Google API Script!');
+    }
+  }
+
+  playerStats() {
+    const scriptElement = this.scriptService.loadJsScript(this.renderer, "https://widgets.sportmonks.com/js/league/topscorers.js");
+
+    scriptElement.onload = () => {
+      console.log('Google API Script loaded', scriptElement);
+
+    }
+    scriptElement.onerror = () => {
+      console.log('Could not load the Google API Script!');
+    }
+  }
 }

@@ -47,24 +47,36 @@ input,
 .mdc-text-field__input {
   color: #fff !important;
   position: absolute !important;
-    left: 54px!important;
-    top: 13px!important;
-width: 80% !important;
+  left: 54px !important;
+  top: 13px !important;
+  width: 80% !important;
 }
 
 
 
-.mdc-tab-indicator--active{
+.mdc-tab-indicator--active {
   background-color: #805FB3 !important;
   border-radius: 5px;
-  .mdc-tab__text-label{
+
+  .mdc-tab__text-label {
     color: #fff !important;
   }
+}
+
+.mdc-tab-indicator {
+  display: none !important;
+}
+
+.mdc-tab__text-label {
+  color: #000 !important;
+}
+
+.smw-justify-center {
+  img {
+    display: none;
   }
-  .mdc-tab-indicator{
-    display: none !important;
+
+  a {
+    display: none;
   }
-  
-  .mdc-tab__text-label{
-    color: #000 !important;
-  }
+}

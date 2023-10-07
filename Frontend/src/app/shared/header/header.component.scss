@@ -7,6 +7,16 @@
   border-bottom: 1px solid #D9D9D9;
 }
 
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+  background-color: #007bff;
+  color: #fff;
+}
 .home {
   overflow: hidden;
   a{
@@ -30,7 +40,7 @@
  a:active {
     font-weight: 600;
     text-decoration: underline;
-    color: #262626 !important; 
+    color: #262626 !important;
   }
 }
 

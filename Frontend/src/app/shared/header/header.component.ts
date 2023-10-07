@@ -8,22 +8,25 @@ import { CommonService } from 'src/app/service/common.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  exclusive:boolean=false;
-  constructor(private router: Router,private route: ActivatedRoute,
-    private commonService:CommonService) { }
+  exclusive: boolean = false;
+  public isCollapsed = true;
+  constructor(private router: Router, private route: ActivatedRoute,
+    private commonService: CommonService) { }
   ngOnInit(): void {
-this.commonService.dashboardActive.subscribe((res:any)=>{
-  console.log(res,"aaaaaaaaaaaaaaaaaaaaa");
-  
-  this.exclusive=res
-})
+    this.commonService.dashboardActive.subscribe((res: any) => {
+      console.log(res, "aaaaaaaaaaaaaaaaaaaaa");
+
+      this.exclusive = res
+    })
+
+
   }
 
   // ngOnDestroy(): void {
   //   this.commonService.dashboardActive.next(false);
   // }
 
-  
+
   register() {
     this.router.navigateByUrl('/register')
   }
@@ -44,20 +47,20 @@ this.commonService.dashboardActive.subscribe((res:any)=>{
   } predictions() {
     this.router.navigateByUrl('/predictions')
 
-  }home(){
+  } home() {
     this.router.navigateByUrl('/home')
 
-  }goToHome(){
+  } goToHome() {
     this.router.navigateByUrl('/home')
 
   }
-  logout(){
+  logout() {
     this.commonService.dashboardActive.next(false);
 
-localStorage.removeItem('Token');
-localStorage.removeItem('registerResponse');
-localStorage.removeItem('UserData');
-this.router.navigateByUrl('/home')
+    localStorage.removeItem('Token');
+    localStorage.removeItem('registerResponse');
+    localStorage.removeItem('UserData');
+    this.router.navigateByUrl('/home')
 
   }
 }
