@@ -19,7 +19,6 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.commonService.dashboardActive.subscribe((res: any) => {
-      console.log(res, "aaaaaaaaaaaaaaaaaaaaa");
       this.exclusive = res
     })
 
