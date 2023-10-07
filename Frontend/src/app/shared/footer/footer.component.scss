@@ -1,109 +1,41 @@
 .footer {
   background-color: #262626;
   width: 100%;
-  height: 562px;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  // position: absolute;
-  bottom: 0;
-  margin: 0px 0 0 0;
-  padding: 38px 0 0 0;
-
-  .upper-part {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-
-    .logo_div {
-      width: 212.391px;
-      height: 55px;
-      flex-shrink: 0;
-      position: relative;
-
-      img {
-        position: absolute;
-        top: -31px;
-      }
-
-      p {
-        // width: 383px;
-        color: #FFFFFF;
-        font-family: Montserrat;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 25px;
-        width: 383px;
-        position: absolute;
-        top: 57px;
-        /* 178.571% */
-      }
-
-      img {
-        width: 212.391px;
-        height: 55px;
-        flex-shrink: 0;
-      }
-    }
-
-    .fields {
-      width: 50%;
-      height: 62px;
-      flex-shrink: 0;
-      margin: -32px 0px 0px 60px;
-      position: absolute;
-      right: 20px;
-
-      tr {
-        height: 27px;
-        th {
-          color: #448EE4;
-          font-family: Montserrat;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: 4;
-        }
-      }
-
-      td {
-        color: #FFFFFF;
-        font-family: Montserrat;
-        font-size: 18px;
-        // font-style: normal;
-        font-weight: 400;
-        // line-height: normal;
-        word-spacing: 2px;
-      }
-
-    }
-  }
+  height: auto;
+  padding: 60px 0 38px 0;
+  text-align: center;
+  color: #fff;
 }
 
+
+
 .bottom-text {
-  color: #FFFFFF;
-  text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   padding: 2rem;
 }
 
-
 .padding {
-  width: 383px;
+  width: 100%;
   margin-top: 40px;
   font-size: 15px;
-  color: #FFFFFF;
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 25px
+  line-height: 25px;
 }
-.border-bottomSide{
-  border-bottom: #FFFFFF 2px solid;
+
+.border-bottomSide {
+  border-bottom: 2px solid #FFFFFF;
+}
+
+td, th, tr {
+  color: #fff;
+}
+
+.logo_div{
+  text-align: start;
+  img {
+    margin: 0px 0px 36px 0;
+  }
+  p{
+    color: #fff;
+  }
 }

@@ -787,8 +787,8 @@
     </section>
     <section>
       <div class="col-12 d-flex flex-wrap">
-        <div class="col-1   d-lg-block d-md-none d-none"></div>
-        <div class="col-12 col-lg-10 col-md-12 d-flex flex-wrap">
+        <div class="col-1"></div>
+        <div class="col-10 d-flex flex-wrap">
 
           <div class="col-12 completedFixture mt-3 mb-3">
             <span>Football Stats by theFootyStats</span>
@@ -797,8 +797,8 @@
           ">
             <mat-accordion class="w-100 expansionPanelData">
 
-              <mat-expansion-panel class="matExpansionPanel" [expanded]="true"
-                (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+              <mat-expansion-panel class="matExpansionPanel" [expanded]="true" (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
@@ -806,18 +806,27 @@
                   </mat-panel-title>
                 </mat-expansion-panel-header>
                 <div class="text-start divData">
-                  <p>We offer a multitude of stats for over 1000 competitions worldwide. The list of
-                    football stats we
-                    cover are :</p>
+                  <p>The list of stats we provide is simply everything you need to make important decisions on each game
+                    across 1000’s of leagues worldwide. The most popular stats are as follow:</p>
 
                   <ul>
-                    <li>H2H Stats for Upcoming Fixtures</li>
-                    <li>BTTS Stats</li>
-                    <li>Corner Stats</li>
-                    <li>Over 2.5 Goals</li>
-                    <li>Expected Goals Stats</li>
-                    <li>Football Livescores</li>
-                    <li>Football League Stats</li>
+                    <li>Head to Head Stats
+                    </li>
+                    <li> Both Teams to Score Stats
+                    </li>
+                    <li> Yellow/Red Card Stats
+                    </li>
+                    <li> Over 1.5/2.5 Goals
+                    </li>
+                    <li> Corner Stats
+                    </li>
+                    <li> Player Stats
+                    </li>
+                    <li> Overall Team Stats
+                    </li>
+                    <li> In Play Live Scores
+                    </li>
+                    <li>League Stats</li>
 
                   </ul>
 
@@ -826,61 +835,54 @@
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 23px; /* 143.75% */">Aside from this list, we offer stats for every
-                    aspect of the football game and the stats are being updated by the
-                    minute. We recently included xG (Expected Goals) for hundreds of leagues,
-                    including the <span style="color: #448EE4;
-                    font-family: Montserrat;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 23px;">English Premier
-                      League's xG</span>. Under the hood, we have thousands of data-points all our
-                    supported leagues. We crunch the
-                    numbers and make them easy and intuitive for our users.</p>
+                  line-height: 23px; /* 143.75% */">There are plenty more stats to be seen as well. We aim for this
+                    website to be the hub of all the stats you will need. Become a Premium member today and make it
+                    count.
+
+                  </p>
                 </div>
 
               </mat-expansion-panel>
 
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false">
+              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader">
+                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span class="expansionPanelHeader">
                       What tools do you offer ?</span>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                <p>There are plenty of tools all around the site. This can be a simple team, league or player search to
+                  getting our predictions on certain games that are simply adding up stats wise. We know that each
+                  person is different and has preferences for the stats they want so a simple filter for BTTS, Corners,
+                  Overs etc is there to use.</p>
               </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false">
+              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader">
+                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span class="expansionPanelHeader">
                       What are football stats for ?</span>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                <p>Ultimately football stats are used or that upper hand in decision making. This will usually be used
+                  to put a bet together. The problem with betting is impulsive decisions and no research leading to an
+                  overall loss. What we want to see is people using the stats to better their knowledge overall and to
+                  get that overall profit against the bookmakers rather than going in blind.
+
+                </p>
               </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false">
+              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader">
+                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span class="expansionPanelHeader">
                       How often is data updated ?</span>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                <p>They are updated on average every 10 minutes.</p>
               </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false">
+              <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader">
+                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span class="expansionPanelHeader">
                       Why do I need football stats for betting ?</span>
                   </mat-panel-title>
                   <mat-panel-description>
@@ -888,43 +890,48 @@
 
                   </mat-panel-description>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                <p>The saying always goes ‘The Bookies Always Win’. This is true but it doesn’t mean everyone has to
+                  lose with them. We have seen that betting is more impulsive and guess work rather than using any sort
+                  of method to be successful. What stats do is use every single angle and outcome from the past to
+                  predict what will happen in the future. There are no guarantees in betting but having stats will help
+                  make educated decisions and hopefully produce a long term strategy for profit. We genuinely feel here
+                  at The Footy Stats that more people will start winning by simply having all the stats you could ever
+                  need on your phone or device.</p>
               </mat-expansion-panel> <mat-expansion-panel (opened)="panelOpenState = true"
                 (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
-                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader">
+                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span class="expansionPanelHeader">
                       How can I use your stats for football betting ?</span>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                <p>The first point of call is to find a market you are passionate about or feel confident with. Once you
+                  have this you can use the site via the filters of those markets and get in depth detail to help make
+                  your decision. Every person is different but we definitely see that those with a passion for it and
+                  uses the stats has a much better return on their betting experience which is the absolute goal for
+                  anyone who uses our website.</p>
               </mat-expansion-panel> <mat-expansion-panel (opened)="panelOpenState = true"
                 (closed)="panelOpenState = false">
                 <mat-expansion-panel-header>
                   <mat-panel-title>
                     <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader"> Do
-                      you offer tools to export data, like CSV ?</span>
+                      class="expansionPanelHeader">What does a Premium Subscription offer?</span>
                   </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
+                <p>Our Premium package gives members access to every single stat in every single league on the website.
+                  This in itself is worth the subscription but we also offer a Predictions page based on collated stats
+                  over all these leagues as well. This gives every single member even more of an upper hand when putting
+                  together their bets. Overall thought what it provides is peace of mind when making a selection, much
+                  more confidence in investing into betting and an easy to use experience for a fantastic price compared
+                  to many on the market. Premium members will also be added to Chats where you can share your finds,
+                  Telegram groups and Football Knockout Competitions for cash prizes. We want to build the biggest and
+                  most profitable betting community on all social platforms. Join today and be a part of the team.</p>
               </mat-expansion-panel>
-              <mat-expansion-panel (opened)="panelOpenState = true"
-                (closed)="panelOpenState = false">
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <img src="../../../../assets/Football (3).svg" alt=""> &nbsp; <span
-                      class="expansionPanelHeader">Can
-                      I use this football data in my own website / application ?</span>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>I'm visible because I am open</p>
-              </mat-expansion-panel>
+
             </mat-accordion>
           </div>
         </div>
-        <div class="col-1  d-lg-block d-md-none d-none"></div>
+        <div class="col-1"></div>
 
       </div>
 
