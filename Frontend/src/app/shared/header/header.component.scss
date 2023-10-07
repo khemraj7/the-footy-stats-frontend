@@ -7,19 +7,21 @@
   border-bottom: 1px solid #D9D9D9;
 }
 
-a{
+a {
   text-decoration: none;
   cursor: pointer;
 }
 
-.active {
-  font-weight: bold;
-  background-color: #007bff;
-  color: #fff;
-}
+// .active {
+//   font-weight: bold;
+//   background-color: #007bff;
+//   color: #fff;
+// }
+
 .home {
   overflow: hidden;
-  a{
+
+  a {
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 400;
@@ -28,21 +30,22 @@ a{
     text-align: center;
     text-decoration: none;
     color: #666666;
-   cursor: pointer;
+    cursor: pointer;
   }
+
   a:hover {
     text-decoration: underline;
-   cursor: pointer;
+    cursor: pointer;
   }
 }
 
-.home{
- a:active {
-    font-weight: 600;
-    text-decoration: underline;
-    color: #262626 !important;
-  }
-}
+// .home {
+//   a:active {
+//     font-weight: 600;
+//     text-decoration: underline;
+//     color: #262626 !important;
+//   }
+// }
 
 .logo_div {
   float: left;
@@ -61,7 +64,7 @@ a{
 }
 
 .register {
-  background: #805FB3;
+  background: #448EE4;
   color: #FFFFFF;
   cursor: pointer;
 
@@ -84,11 +87,43 @@ a{
 
 .login {
   background: #ECE6F6;
-  color: #805FB3;
+  color: #448EE4;
 
 
   img {
     margin-right: 5px;
   }
 
+}
+
+/* Add your desired styles for the active link here */
+.nav-item.active {
+  // background-color: #448EE4;
+  // border-radius: 20px;
+  // width: fit-content;
+  // display: grid;
+  // place-items: center;
+  // /* Highlight the background color for the active link */
+
+  a {
+
+    // color: #fff;
+    color: #448EE4;
+    font-size: larger;
+    font-weight: 700;
+  }
+
+  /* Change text color for the active link */
+  // text-decoration: underline;
+  // font-size: x-large;
+  // font-weight: 900;
+}
+
+ul {
+  li {
+    a {
+      font-size: large;
+      font-weight: 500;
+    }
+  }
 }

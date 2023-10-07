@@ -13,35 +13,44 @@
                     <mat-label class="label_fields">Email or Username</mat-label>
                     <mat-form-field appearance="outline">
                         <img src="../../../../assets/ph_user-bold (1).png" alt="" class="img_login">
-                        <input matInput type="text" placeholder="Enter email or username" formControlName="email">
-                        <mat-error *ngIf="logForm.controls['email'].hasError('required')">Email is required .
+                        <input matInput type="text" placeholder="Enter email or username"
+                            formControlName="email">
+                        <mat-error *ngIf="logForm.controls['email'].hasError('required')">Email is
+                            required .
                         </mat-error>
                     </mat-form-field>
-                        <mat-label class="label_fields">Password</mat-label>
-    
+                    <mat-label class="label_fields">Password</mat-label>
+
                     <mat-form-field appearance="outline">
                         <img src="../../../../assets/uil_lock.png" alt="" class="img_login">
-                        <input matInput type="text" placeholder="Enter password" formControlName="password">
-                        <mat-error *ngIf="logForm.controls['password'].hasError('required')">Password is required .
+                        <input matInput type="text" placeholder="Enter password"
+                            formControlName="password">
+                        <mat-error
+                            *ngIf="logForm.controls['password'].hasError('required')">Password is
+                            required .
                         </mat-error>
                     </mat-form-field>
 
-                    <span style="color: #ffffff; float: right;" (click)="forgetPassword()">Forgot Password?</span>
+                    <span style="color: #ffffff; float: right;" (click)="forgetPassword()">Forgot
+                        Password?</span>
                     <br><br><br>
 
-                    <button class="w-100"  style="background-color: #805FB3 !important ; color: #ffffff;height: 50px;" mat-raised-button type="submit">Login</button>
+                    <button class="w-100"
+                        style="background-color: #448EE4 !important ; color: #ffffff;height: 50px;"
+                        mat-raised-button type="submit">Login</button>
                     <p class="mt-2">New to Login <a routerLink="/register">Register Here</a> </p>
                 </form>
-    
+
                 <!-- <p class="mt-2 text-center" style="color: #ccc;">Or Continue with</p> -->
-     <div>
-        <img src="../../../../assets/" alt="">
-     </div>
-    
+                <div>
+                    <img src="../../../../assets/" alt="">
+                </div>
+
             </div>
-    
+
         </div>
     </div>
 
-    <img style="position: fixed; bottom: 0; right: 0;" src="../../../../assets/sideFootball.png" alt="">
+    <img style="position: fixed; bottom: 0; right: 0;" src="../../../../assets/sideFootball.png"
+        alt="">
 </div>

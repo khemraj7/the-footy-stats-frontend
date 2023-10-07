@@ -4,8 +4,8 @@
     height: 235px;
     background-position: center;
     position: relative;
-    background-color: #805FB3 !important;
-  
+    background-color: #448EE4 !important;
+
   }
   .alignText {
     position: absolute;
@@ -21,7 +21,7 @@
     letter-spacing: 0em;
     text-align: center;
   }
-  
+
   .alignText>p {
     color: #fff !important;
     font-family: Montserrat;
@@ -35,14 +35,14 @@
   .progressData {
     text-align: end;
     width: 590px;
-  
+
     .progress_filter {
       background: #F6F6F6;
       padding: 10px;
       border-radius: 5px;
-  
+
     }
-  
+
     select {
       border-radius: 5px;
       word-wrap: normal;
@@ -50,18 +50,18 @@
       height: 34px;
       border: none;
       margin: 0 10px;
-  
+
     }
-  
+
     button {
       border: none;
     }
   }
-  
+
   .sort_teams {
     text-align: end;
     margin-left: 64px;
-  
+
     span {
       font-family: Montserrat;
       font-size: 14px;
@@ -76,13 +76,13 @@
     margin: 10px 0;
   }
 
- 
+
   .progress_report {
     height: auto;
     padding: 10px;
   }
 
-  
+
 .hh {
     font-family: Montserrat;
     font-size: 12px;
@@ -119,7 +119,7 @@
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
-  
+
   }
 
   .teams {

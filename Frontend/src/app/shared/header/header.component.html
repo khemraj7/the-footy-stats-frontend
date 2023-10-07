@@ -36,21 +36,33 @@
       <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" (click)="home()">Home</a>
+            <a class="nav-link" routerLink="/home">Home</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/stats">stats</a>
+            <a class="nav-link" routerLink="/stats">Stats</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/matches">matches</a>
+            <a class="nav-link" routerLink="/matches">Matches</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/leagues">leagues</a>
+            <a class="nav-link" routerLink="/leagues">Leagues</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/predictions">Predictions</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="showLoginButton">
+            <button class="login abc" (click)="login()"><img
+                src="../../../assets/ion_log-in-outline.png" alt="">Login</button>
+          </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="!showLoginButton">
+            <button class="login abc" (click)="logout()" *ngIf="exclusive">Logout</button>
+          </li>
+          <li class="nav-item" routerLinkActive="active" *ngIf="showLoginButton">
+            <button class="register abc" (click)="register()">Register</button>
+
           </li>
         </ul>
       </div>
     </div>
   </nav>
-
-
 </div>

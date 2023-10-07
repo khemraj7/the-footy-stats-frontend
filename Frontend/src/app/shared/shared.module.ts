@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from '../material/material.module';
 import { LoaderComponent } from './loader/loader.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -15,9 +16,10 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule
   ],
-  exports:[
+  exports: [
     HeaderComponent,
     FooterComponent,
     LoaderComponent
