@@ -1,182 +1,213 @@
 .bgImage {
-    border-top: 1px solid #fff;
-    background-image: url('../../../assets/Mask\ group\ \(3\).png');
-    height: 235px;
-    background-position: center;
-    position: relative;
-    background-color: #448EE4 !important;
+  border-top: 1px solid #fff;
+  background-image: url('../../../assets/Mask\ group\ \(3\).png');
+  height: 235px;
+  background-position: center;
+  position: relative;
+  background-color: #448EE4 !important;
 
-  }
-  .alignText {
-    position: absolute;
-    left: 33%;
-    bottom: 5%;
-  }
-  .alignText>h1 {
-    color: #fff !important;
-    font-family: "MuseoModerno", cursive;
-    font-size: 48px;
-    font-weight: 600;
-    line-height: 55px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
+}
 
-  .alignText>p {
-    color: #fff !important;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
+.alignText {
+  margin: 0 auto;
+  position: relative;
+  bottom: -16vh;
+}
 
-  .progressData {
-    text-align: end;
-    width: 590px;
+.alignText>h1 {
+  color: #fff !important;
+  font-family: "MuseoModerno", cursive;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 55px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 
-    .progress_filter {
-      background: #F6F6F6;
-      padding: 10px;
-      border-radius: 5px;
+.alignText>p {
+  color: #fff !important;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 
-    }
+.progressData {
+  text-align: end;
+  width: 590px;
 
-    select {
-      border-radius: 5px;
-      word-wrap: normal;
-      width: 243px;
-      height: 34px;
-      border: none;
-      margin: 0 10px;
-
-    }
-
-    button {
-      border: none;
-    }
-  }
-
-  .sort_teams {
-    text-align: end;
-    margin-left: 64px;
-
-    span {
-      font-family: Montserrat;
-      font-size: 14px;
-      font-weight: 600;
-      line-height: 17px;
-      letter-spacing: 0em;
-      text-align: right;
-      padding: 0 10px;
-    }
-  }
-  section {
-    margin: 10px 0;
-  }
-
-
-  .progress_report {
-    height: auto;
+  .progress_filter {
+    background: #F6F6F6;
     padding: 10px;
+    border-radius: 5px;
+
   }
+
+  select {
+    border-radius: 5px;
+    word-wrap: normal;
+    width: 243px;
+    height: 34px;
+    border: none;
+    margin: 0 10px;
+
+  }
+
+  button {
+    border: none;
+  }
+}
+
+.sort_teams {
+  text-align: end;
+  margin-left: 64px;
+
+  span {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: right;
+    padding: 0 10px;
+  }
+}
+
+section {
+  margin: 10px 0;
+}
+
+
+.progress_report {
+  height: auto;
+  padding: 10px;
+}
 
 
 .hh {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0em;
-    text-align: center;
-    width: 152px;
-    border-right: 1px solid #fff;
-    height: 22px;
-    margin: 0 auto;
-  }
-  .goals {
-    border-radius: 10px;
-    height: 44px;
-  }
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+  width: 152px;
+  border-right: 1px solid #fff;
+  height: 22px;
+  margin: 0 auto;
+}
 
-  .img_for_goals {
-    position: relative;
-    top: -2px;
-    margin-right: 12px;
-  }
-  .heading_card {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  .data_countries {
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
+.goals {
+  border-radius: 10px;
+  height: 44px;
+}
 
-  }
+.img_for_goals {
+  position: relative;
+  top: -2px;
+  margin-right: 12px;
+}
 
-  .teams {
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 15px;
-    letter-spacing: 0em;
-    text-align: right;
-    color: #182957;
-  }
-  .country_leagues{
-   width: 310px !important;
-    font-family: Montserrat;
-    font-weight: 600;
-    letter-spacing: 0em;
-    text-align: center;
-    background: #8C94AB;
-    margin: 0 auto;
-    padding: 2px 10px 3px 10px;
-    border-radius: 5px;
-    top:-14px;
-    left: 33vw;
-    position: absolute;
+.heading_card {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 
-  }
-  .title_counytry{
-   position: relative
-   ;margin-top: 20px;
-    margin-bottom: 14px;
+.data_countries {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
 
-  }
+}
 
-  .register_free_account {
-    background-color: #4D3FA1;
-    width: 357px;
-    height: 51px;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: grid;
-    place-items: center;
-    /* padding-top: 20px; */
-    margin-top: 25px;
+.teams {
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: right;
+  color: #182957;
+}
 
-   div {
+.country_leagues {
+  width: 310px !important;
+  font-family: Montserrat;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+  background: #8C94AB;
+  margin: 0 auto;
+  padding: 2px 10px 3px 10px;
+  border-radius: 5px;
+  top: -14px;
+  left: 33vw;
+  position: absolute;
+
+}
+
+.title_counytry {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 14px;
+
+}
+
+.register_free_account {
+  background-color: #4D3FA1;
+  width: 357px;
+  height: 51px;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  /* padding-top: 20px; */
+  margin-top: 25px;
+
+  div {
     img {
       margin: 0px 10px 10px 0px;
     }
-   }
   }
+}
 
-  .free_account {
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #FFFFFF;
+.free_account {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .alignText {
+    margin: 0 auto;
+    position: relative;
+    bottom: -7vh;
+    padding: 0px 5px;
   }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

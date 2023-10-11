@@ -13,33 +13,53 @@
 
       <!-- Navbar items -->
       <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto gap-2 gap-md-3 gap-lg-3">
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/home">Home</a>
+            <a class="nav-link" routerLink="/home"> <img class=" d-md-none d-lg-none"
+                src="../../../assets/iconMenu/home-1-svgrepo-com.svg" style="width:20px" alt="">
+              Home</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/stats">Stats</a>
+            <a class="nav-link" routerLink="/stats"><img class=" d-md-none d-lg-none"
+                src="../../../assets/iconMenu/chart-line-svgrepo-com.svg" style="width:20px" alt="">
+              Stats</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/matches">Matches</a>
+            <a class="nav-link" routerLink="/matches"> <img class=" d-md-none d-lg-none"
+                src="../../../assets/iconMenu/calendar-days-svgrepo-com.svg" style="width:20px"
+                alt="">
+              Matches</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/leagues">Leagues</a>
+            <a class="nav-link" routerLink="/leagues">
+              <img class=" d-md-none d-lg-none"
+                src="../../../assets/iconMenu/star-circle-svgrepo-com.svg" style="width:20px"
+                alt="">
+              Leagues</a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link" routerLink="/predictions">Predictions</a>
+            <a class="nav-link" routerLink="/predictions">
+              <img class=" d-md-none d-lg-none"
+                src="../../../assets/iconMenu/sand-clock-time-svgrepo-com.svg" style="width:20px"
+                alt="">
+              Predictions</a>
           </li>
           <li class="nav-item" routerLinkActive="active" *ngIf="showLoginButton">
-            <button class="login abc" (click)="login()"><img
-                src="../../../assets/ion_log-in-outline.png" alt="">Login</button>
+            <div class="col-12 d-flex p-0 gap-2">
+              <div class="col-6">
+                <button class="login abc w-100" (click)="login()"><img
+                    src="../../../assets/ion_log-in-outline.png" alt="">Login</button>
+              </div>
+              <div class="col-6">
+                <button class="register abc w-100" (click)="register()">Register</button>
+              </div>
+            </div>
+
           </li>
           <li class="nav-item" routerLinkActive="active" *ngIf="!showLoginButton">
             <button class="login abc" (click)="logout()" *ngIf="exclusive">Logout</button>
           </li>
-          <li class="nav-item" routerLinkActive="active" *ngIf="showLoginButton">
-            <button class="register abc" (click)="register()">Register</button>
 
-          </li>
         </ul>
       </div>
     </div>
