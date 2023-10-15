@@ -194,6 +194,26 @@ section {
   box-shadow: none;
   border: 1px solid #ccc;
 }
+.btnmCustom {
+  background: #448EE4;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.abc {
+  border: none;
+  width: 117px;
+  height: 42px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 21px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: center;
+  cursor: pointer;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {

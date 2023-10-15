@@ -1,0 +1,75 @@
+
+<div class="container" *ngIf="!loader">
+<div class="mt-3 mb-3">
+     <span><img style="    width: 50px;
+        border: 1px solid #ccc;
+        border-radius: 100%;
+        height: 50px;
+        padding: 4px;
+    " [src]="leagueData['image_path']" alt="">  <span style="font-size: 24px; font-weight: 600;"> {{ leagueData['name'] }}</span></span> 
+
+
+</div>
+<h2 class="mt-2 mb-2 text-center" style="    background: #448EE4;
+padding: 3px 0;
+border-radius: 5px;
+color: #fff;">Upcoming fixture</h2>
+<div >
+    <table class="mb-4">
+        <thead>
+          <tr>
+            <th>S No</th>
+            <!-- <th>ID</th> -->
+            <!-- <th>Sport ID</th> -->
+            <!-- <th>League ID</th> -->
+            <!-- <th>Season ID</th> -->
+            <!-- <th>Stage ID</th> -->
+            <!-- <th>Group ID</th> -->
+            <!-- <th>Round ID</th> -->
+            <!-- <th>State ID</th> -->
+            <!-- <th>Venue ID</th> -->
+            <th>Name</th>
+            <th>Starting At</th>
+            <th>Result Info</th>
+            <th>Leg</th>
+            <th>Details</th>
+            <th>Duration</th>
+            <!-- <th>Placeholder</th> -->
+            <!-- <th>Has Odds</th> -->
+            <!-- <th>Starting At Timestamp</th> -->
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of leagueData['upcoming']; let i = index" class="card-row">
+                <td>{{i + 1}}</td>
+                <!-- <td data-label="ID">{{data['id']}}</td> -->
+                <!-- <td data-label="Sport ID">{{data['sport_id']}}</td>
+                <td data-label="League ID">{{data['league_id']}}</td>
+                <td data-label="Season ID">{{data['season_id']}}</td>
+                <td data-label="Stage ID">{{data['stage_id']}}</td>
+                <td data-label="Group ID">{{data['group_id']}}</td>
+                <td data-label="Round ID">{{data['round_id']}}</td>
+                <td data-label="State ID">{{data['state_id']}}</td>
+                <td data-label="Venue ID">{{data['venue_id']}}</td> -->
+                <td data-label="Name">{{data['name']}}</td>
+                <td data-label="Starting At">{{data['starting_at'] | date}} &nbsp; {{data['starting_at'] | date:'hh:mm a'}}</td>
+                <td data-label="Result Info">{{data['result_info'] ? data['result_info'] : 'N/A'}}</td>
+                <td data-label="Leg">{{data['leg']}}</td>
+                <td data-label="Details">{{data['details'] ? data['details'] : 'N/A'}}</td>
+                <td data-label="Length">{{data['length']}} Min</td>
+                <!-- <td data-label="Placeholder">{{data['placeholder']}}</td>
+                <td data-label="Has Odds">{{data['has_odds']}}</td> -->
+                <!-- <td data-label="Starting At Timestamp">{{data['starting_at_timestamp']}}</td> -->
+              </tr>
+              
+        </tbody>
+      </table>
+    
+</div>
+</div>
+
+<app-loader *ngIf="loader"></app-loader>
+
+
+
+<app-footer></app-footer>

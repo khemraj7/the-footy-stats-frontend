@@ -42,7 +42,7 @@
       <mat-expansion-panel hideToggle class="panel mt-2 mb-2" *ngFor="let team of teams; let index = index">
         <mat-expansion-panel-header >
           <mat-panel-title>
-            <span> {{ index+1 }}</span> &nbsp;&nbsp; <span><img style="    width: 30px;
+            <span> {{ calculateIndex(currentPage, index) }}</span> &nbsp;&nbsp; <span><img style="    width: 30px;
               border: 1px solid #ccc;
               border-radius: 100%;
               height: 30px;
@@ -56,14 +56,29 @@
         <p>Matches Played: {{ team['sub_type'] }}</p>
         <p>Last Played  : {{team['last_played_at'] | date}} </p>
 
-        current season :{{team['currentseason']['starting_at']}}
-      
+        <!-- current season :{{team['currentseason']['starting_at']}} -->
+        <button [routerLink]="'/leagues/leagues/' + team['id']" style="    color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        background: #448EE4;
+        padding: 6px 8px;
+        border-radius: 5px;
+       ">
+          Load more ...
+        </button>
       </mat-expansion-panel>
     </mat-accordion>
     
+
+    <div class="text-end col-12">
+      <button class="btnmCustom abc" [disabled]="currentPage == 1"(click)="getAllLeagues(currentPage-1)">prev</button>&nbsp;&nbsp;
+      <span class="numberCustom">{{currentPage}}</span>&nbsp;&nbsp;
+      <button class="btnmCustom abc" [disabled]="currentPage < 1" (click)="getAllLeagues(currentPage+1)">next</button>
+       </div>
+     </div>
     
 
-  </div>
+  
 
 
 

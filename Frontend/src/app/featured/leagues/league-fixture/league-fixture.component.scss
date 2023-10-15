@@ -1,0 +1,57 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+    padding: 0 5px;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  @media screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+      border: none;
+    }
+
+    th {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    tr {
+      margin-bottom: 10px;
+    }
+
+    td {
+      border: none;
+      border-bottom: 1px solid #f2f2f2;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 0;
+      font-weight: bold;
+    }
+    .card-row {
+        border: 1px solid #ccc; /* Change border styles for mobile devices */
+        padding: 0 5px;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+  }

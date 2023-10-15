@@ -236,11 +236,12 @@ export class LeaguesComponent implements OnInit, AfterViewInit {
   },]
   loader: boolean = false;
   teams: any;
+  currentPage: number = 1;
   constructor(private renderer: Renderer2,
     private scriptService: ScriptService, private api :  ApiService, private http :HttpClient) { }
   ngOnInit(): void {
     this.loader = true
-this.getAllLeagues()
+this.getAllLeagues(this.currentPage)
     setTimeout(() => {
       this.loader = false
     }, 2000);
@@ -292,17 +293,19 @@ this.getAllLeagues()
     }
   }
 
-  getAllLeagues(){
-    const id =1
+  getAllLeagues(id){
+    console.log(id)
+    this.currentPage = id
     this.api.get(`/league/${id}`,{}).subscribe((res)=>{
       console.log('res', res)
       this.teams = res['data'].leagues['data']
     })
+  }
 
-    // this.http.get("http://localhost:3000/api/v1/league/1").subscribe(res=>{
-    //   console.log(res)
-    //   this.teams = res['data'].leagues['data']
-    // })
+  calculateIndex(currentPage: number, index: number): number {
+    const itemsPerPage = 25;
+    const startingIndex = (currentPage - 1) * itemsPerPage + 1;
+    return startingIndex + index;
   }
 
 }
