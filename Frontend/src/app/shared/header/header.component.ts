@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonService } from 'src/app/service/common.service';
 
@@ -11,13 +11,14 @@ export class HeaderComponent implements OnInit {
   exclusive: boolean = false;
   public isCollapsed = true;
   showLoginButton: boolean = true;
-
+  isMobile: boolean = false
 
   constructor(private router: Router, private route: ActivatedRoute,
-    private commonService: CommonService) { }
+    private commonService: CommonService, private renderer: Renderer2, private elementRef: ElementRef) { }
 
 
   ngOnInit(): void {
+    this.checkScreenSize()
     this.commonService.dashboardActive.subscribe((res: any) => {
       this.exclusive = res
     })
@@ -76,5 +77,29 @@ export class HeaderComponent implements OnInit {
     localStorage.removeItem('UserData');
     this.router.navigateByUrl('/home');
     this.showLoginButton = true;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.checkScreenSize();
+  }
+  checkScreenSize() {
+    console.log('window.innerWidth', window.innerWidth)
+    if (window.innerWidth < 992) { // Adjust the breakpoint as needed
+      this.isMobile = true;
+    } else {
+      this.isMobile = false;
+      // Close the mobile menu by removing the 'show' class (if it's open)
+      this.renderer.removeClass(this.elementRef.nativeElement.querySelector('#navbarNav'), 'show');
+    }
+  }
+
+  closeNavbar() {
+    if (this.isMobile) {
+      const navbarButton = this.elementRef.nativeElement.querySelector('#navbarButton');
+      if (navbarButton) {
+        navbarButton.click();
+      }
+    }
   }
 }

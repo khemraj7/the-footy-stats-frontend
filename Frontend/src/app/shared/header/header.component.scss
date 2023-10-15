@@ -150,18 +150,53 @@ ul {
       font-size: 20px;
       font-weight: 700;
       background: #448EE4;
+      padding: 6px 8px;
+      border-radius: 5px;
+      box-shadow: #333 0px 1px 5px 0px;
     }
+
+    margin-top: 4px;
 
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 600px) {
+  .nav-item.active {
+    a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      background: #448EE4;
+      padding: 6px 8px;
+      border-radius: 5px;
+      box-shadow: #333 0px 1px 5px 0px;
+    }
+
+    margin-top: 4px;
+
+  }
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .show {
     border: none !important;
+  }
+
+  .nav-item.active {
+    a {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      background: #448EE4;
+      padding: 6px 8px;
+      border-radius: 5px;
+      box-shadow: #333 0px 1px 5px 0px;
+    }
+
+    margin-top: 4px;
+
   }
 }
 

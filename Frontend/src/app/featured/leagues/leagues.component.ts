@@ -247,13 +247,16 @@ export class LeaguesComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
-      this.leaugesData()
+      this.standing_leagues()
+      this.top_scorer()
     }, 2000);
+
+
 
   }
 
 
-  leaugesData() {
+  top_scorer() {
     const scriptElement = this.scriptService.loadJsScript(this.renderer, "https://widgets.sportmonks.com/js/league/topscorers.js");
 
     scriptElement.onload = () => {
@@ -263,5 +266,28 @@ export class LeaguesComponent implements OnInit, AfterViewInit {
     scriptElement.onerror = () => {
       console.log('Could not load the Google API Script!');
     }
+
+    // Get the element by its class name
+    var elements = document.getElementsByClassName("smw-text-xl");
+
+    // Loop through all elements with the specified class
+    for (var i = 0;i < elements.length;i++) {
+      // Change the text content for each element
+      elements[i].textContent = "the footy stats";
+    }
   }
+
+  standing_leagues() {
+    const scriptElement = this.scriptService.loadJsScript(this.renderer, "https://widgets.sportmonks.com/js/league/standings.js");
+
+    scriptElement.onload = () => {
+      console.log('Google API Script loaded', scriptElement);
+
+    }
+    scriptElement.onerror = () => {
+      console.log('Could not load the Google API Script!');
+    }
+  }
+
 }
+
