@@ -15,17 +15,52 @@
   </div>
 
 
-  <div class="container mt-4">
-
-    <div id="sportmonks-widget" data-widget="league-standings"
-      data-info="qaFIE2ZYyqLn3dhxeCLq4wttO8qdg2JThQCt1yavE79yKi66NY+1z5UG51/X/hBx6wsVSivZcexseJ07SGQvj69cDdrxO/2x0oprscgKxeSpfQ/mWJVIExifAktkEN5vzCsDkxVamAMj2OZL5WiMjJKKNv75euDmy0gcqI7XyrXypS0XAXtJJpER+URwYd5nbxCOpXSHYnt/c4aF1sb1W1urCrFj+ybdhJkzXeQ6UuIgnGnl7N/x04j2eTfHmT0FsFU0rKHEv/4KB6RN63r0IjHK/Vi+mHeV51bS1RT/xBomLRF/x0miZeJIOsT1ztGgNiRHLahr62Uhg+qCgUd2VdRbqU1Lhl8cWAGl2JvYavxGnvJ/bNf6fqrf9/clRCBR/bCTndAQWCk/RZ3JAn0G9aJ3Di2wQRmoiVzxUXEUrqwzZ6Y2JQ9bXuP7obHdlCUkySCz7b7d9z470+7ZJmitXLoj5VEVtkmk/5wIEwFvvlY9oLQTOtxTMcopCTMEtRYG8oOsfP4ZgPBhmyHf+LMRJz/G//hKGereSqnFS0lsKjzI5LNjskygIJG1u1uS19uqpylRr0QSsaaZ83Zuue+lNCMpFy9Aur1vVxf/f1Zqoi7tKjo2/fFe7WBtHfqGgO4WZJzB9TV76P7qwjWrfrOLgSiJPVIKDVMy51aXHKy/4Fc="
-      data-league="72" data-colors="#448EE4,#008AE6,#D0D0D9,#008AE6"></div>
-
+  <!-- <div class="container mt-4">
     <div id="sportmonks-widget" data-widget="league-topscorers"
       data-info="qRVOYYqQaFXHq989XleOdDOLTha0yf6LsJp3EUFNSliH7WSOXKKZPJy3+CLeCH5sN9RHpvef0er6RmcTtBlEyah2/VSoJhCM1RUosvW3pFLzHq2BDiZjReXqoHpK92Z4mrWGvs0jZf8Y7Yr2//+rltxfCN2oPiE6L5xQN10WEIJ/ij592G7ANSCTGiJs0n6GR+bHG+x0UEtvbJ0apxaXFq1Z5fCv6TTXklIjkhmDiF4MyIiCQiIIc6ZtuHU5YQ0ga1BQwBBUXBsBzrWbEQgPoCtcZFtpGD6wxhE5cqnLK5F0DQFCgDISPzQXjnkpYww+mywKRjwLOe6jZBHxlaGrjq6FRGLQvXzQM7N1lZqHvPAGFD1lM6MFwIih39rd/tcj25OfWMyHwwa2mNjEbP1Q6HpjZN8yy0Sa10NmzMj7Oir+2w6b7gp3PC43fyqe3ZUwZkxv7vM2n4h9U27oy4Tt9uD+KwOt/KSwn0S5G+/rWzRr2y2suZdgzG7MDAJiv/MY7B4u/S1REPb2t3PDDATBq+ho5pNQ3YP6O+x7X0nhWCX8qEsBJ/ZtmfVu0TOCLEa3hqHULrGNworvUaTZ91Ltwqi6DEFO4oNN70fcjd8Vtg+zW0lPjzWijIti3aZ8/pc2/pRQ7U38EyrexuN+AZJu4cogizzFKiaHU16p8bJMVA8="
       data-league="72" data-colors="#448EE4,#182957,#D0D0D9,#343353"></div>
-  </div>
+  </div> -->
 
+
+  <div class="container mt-4 mb-4">
+    <!-- <mat-accordion >
+      <mat-expansion-panel hideToggle class="panel">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            This is the expansion title
+          </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the primary content of the panel.</p>
+      </mat-expansion-panel>
+ 
+    </mat-accordion> -->
+
+    <mat-accordion>
+      <mat-expansion-panel hideToggle class="panel mt-2 mb-2" *ngFor="let team of teams; let index = index">
+        <mat-expansion-panel-header >
+          <mat-panel-title>
+            <span> {{ index+1 }}</span> &nbsp;&nbsp; <span><img style="    width: 30px;
+              border: 1px solid #ccc;
+              border-radius: 100%;
+              height: 30px;
+              padding: 4px;
+          " [src]="team['image_path']" alt="">  <span> {{ team['name'] }}</span></span> 
+          </mat-panel-title>
+          <!-- <mat-panel-description>
+            Points:
+          </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <p>Matches Played: {{ team['sub_type'] }}</p>
+      
+      </mat-expansion-panel>
+    </mat-accordion>
+    
+    
+
+  </div>
 
 
 

@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit, Renderer2 } from '@angular/core';
 import reportJsonData from './progress.json'
 import { ScriptService } from 'src/app/service/script.service';
+import { ApiService } from 'src/app/service/api.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-leagues',
@@ -233,11 +235,12 @@ export class LeaguesComponent implements OnInit, AfterViewInit {
 
   },]
   loader: boolean = false;
+  teams: any;
   constructor(private renderer: Renderer2,
-    private scriptService: ScriptService) { }
+    private scriptService: ScriptService, private api :  ApiService, private http :HttpClient) { }
   ngOnInit(): void {
     this.loader = true
-
+this.getAllLeagues()
     setTimeout(() => {
       this.loader = false
     }, 2000);
@@ -287,6 +290,18 @@ export class LeaguesComponent implements OnInit, AfterViewInit {
     scriptElement.onerror = () => {
       console.log('Could not load the Google API Script!');
     }
+  }
+
+  getAllLeagues(){
+    // this.api.getAllLeague('league').subscribe((res)=>{
+    //   console.log('res', res)
+    //   this.teams = res['data'].leagues['data']
+    // })
+
+    this.http.get("http://localhost:3000/api/v1/league/1").subscribe(res=>{
+      console.log(res)
+      this.teams = res['data'].leagues['data']
+    })
   }
 
 }
