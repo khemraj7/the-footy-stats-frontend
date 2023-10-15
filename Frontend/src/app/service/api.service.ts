@@ -8,7 +8,7 @@ import { tap } from 'rxjs/operators';
 export class ApiService {
 
   constructor(private http: HttpClient) { }
-  base_url :String = "localhost:3000/api/v1"
+  base_url :String = "http://localhost:3000/api/v1"
   
   get(url,query){
     try {
@@ -41,7 +41,7 @@ export class ApiService {
     }
   }
 
-  getAllLeague(id){
-    return this.http.get("localhost:3000/api/v1/league/1")
-  }
+  // getAllLeague(id){
+  //   return this.http.get("localhost:3000/api/v1/league/1")
+  // }
 }

@@ -293,15 +293,16 @@ this.getAllLeagues()
   }
 
   getAllLeagues(){
-    // this.api.getAllLeague('league').subscribe((res)=>{
-    //   console.log('res', res)
-    //   this.teams = res['data'].leagues['data']
-    // })
-
-    this.http.get("http://localhost:3000/api/v1/league/1").subscribe(res=>{
-      console.log(res)
+    const id =1
+    this.api.get(`/league/${id}`,{}).subscribe((res)=>{
+      console.log('res', res)
       this.teams = res['data'].leagues['data']
     })
+
+    // this.http.get("http://localhost:3000/api/v1/league/1").subscribe(res=>{
+    //   console.log(res)
+    //   this.teams = res['data'].leagues['data']
+    // })
   }
 
 }

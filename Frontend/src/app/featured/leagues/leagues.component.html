@@ -54,6 +54,9 @@
           </mat-panel-description> -->
         </mat-expansion-panel-header>
         <p>Matches Played: {{ team['sub_type'] }}</p>
+        <p>Last Played  : {{team['last_played_at'] | date}} </p>
+
+        current season :{{team['currentseason']['starting_at']}}
       
       </mat-expansion-panel>
     </mat-accordion>
