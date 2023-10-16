@@ -25,7 +25,9 @@ ngOnInit(): void {
 getDataWithId(id){
 this.api.get(`/league/leagues/${id}`,{}).subscribe(res=>{
   console.log('upcoming fixture', res)
-  this.leagueData =  res['data'].leagues['data'].filter((data)=> data.id == this.league_id)[0]
+  // this.leagueData =  res['data'].leagues['data'].filter((data)=> data.id == this.league_id)[0]
+  this.leagueData =  res['data'].leagues['data']
+  console.log('this.leagueData', this.leagueData)
   if(this.leagueData){
     this.loader = false
 

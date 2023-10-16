@@ -294,9 +294,11 @@ this.getAllLeagues(this.currentPage)
   }
 
   getAllLeagues(id){
+    this.loader =true
     console.log(id)
     this.currentPage = id
     this.api.get(`/league/${id}`,{}).subscribe((res)=>{
+      this.loader =false
       console.log('res', res)
       this.teams = res['data'].leagues['data']
     })

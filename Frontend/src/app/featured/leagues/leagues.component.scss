@@ -236,3 +236,62 @@ section {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+
+.pagination-container {
+  // display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-button {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.custom-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.prev-button {
+  margin-right: 10px;
+}
+
+.next-button {
+  margin-left: 10px;
+}
+
+.number-custom {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.custom-button:hover{
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.custom-button:hover {
+  animation: button-pulse 1s infinite;
+}
+
+@keyframes button-pulse {
+  0% {
+    transform: scale(1);
+    background-color: #448EE4;
+    color: #fff;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #448EE4;
+    color: #fff;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #448EE4;
+    color: #fff;
+  }
+}
+
