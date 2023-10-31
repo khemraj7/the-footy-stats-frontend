@@ -1,0 +1,171 @@
+<div class="container">
+<!-- league Data -->
+<section>
+
+    <div class="col-12 d-flex">
+        <div class="col-6">
+            <img [src]="teamsData['image_path']" alt="">
+            <span>
+               <span> {{leaguesData['name']}}</span> 
+               <b><span>{{teamsData['name']}}</span></b>
+            </span>
+        </div>
+        <div class="col-6 text-end">
+        <h2>UpComing Fixture</h2>
+            <p *ngFor="let team of UpcomingFixtures">
+                vs <span> {{team['name'][1]}} </span>
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+</section>
+
+<section>
+
+    <div class="col-12 d-flex">
+<div class="col-4">
+    <h2> {{this.playerScoreData['type']['name']}} </h2>
+
+    <div>
+        <p>scored:  {{this.playerScoreData['value']['scored']}}</p>
+        <p>missed:  {{this.playerScoreData['value']['missed']}}</p>
+        <p>conversion rate:  {{this.playerScoreData['value']['conversion_rate']}}%</p>
+    </div>
+</div>
+<div class="col-4">
+    <h2> {{this.teamShotsData['type']['name']}} </h2>
+
+    <div>
+        <p>Total:  {{this.teamShotsData['value']['total']}}</p>
+        <p>On target:  {{this.teamShotsData['value']['on_target']}}</p>
+        <p>Off Target:  {{this.teamShotsData['value']['off_target']}}</p>
+        <p>Inside box:  {{this.teamShotsData['value']['inside_box']}}</p>
+        <p>outside box:  {{this.teamShotsData['value']['outside_box']}}</p>
+        <p>blocked:  {{this.teamShotsData['value']['blocked']}}</p>
+        <p>average:  {{this.teamShotsData['value']['average']}}</p>
+    </div>
+</div>
+
+    </div>
+
+ <h2> Goal Timings by 10/15 minutes</h2>
+
+       
+ <table>
+    <thead>
+        <tr>
+            <th>Stats</th>
+            <th>0-15</th>
+            <th>15-30</th>
+            <th>30-45</th>
+            <th>45-60</th>
+            <th>60-75</th>
+            <th>75-90</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let item of concedeData; let index= index">
+
+            <td>{{item['type']['name']}}</td>
+            <td>{{item['value']['0-15']['count']}} &nbsp; {{item['value']['0-15']['percentage']}}%</td>
+            <td>{{item['value']['15-30']['count']}} &nbsp; {{item['value']['15-30']['percentage']}}%</td>
+            <td>{{item['value']['30-45']['count']}} &nbsp; {{item['value']['30-45']['percentage']}}%</td>
+            <td>{{item['value']['45-60']['count']}} &nbsp; {{item['value']['45-60']['percentage']}}%</td>
+            <td>{{item['value']['60-75']['count']}} &nbsp; {{item['value']['60-75']['percentage']}}%</td>
+            <td>{{item['value']['75-90']['count']}} &nbsp; {{item['value']['75-90']['percentage']}}%</td>
+          
+
+            </tr>
+    </tbody>
+   
+</table>
+
+  
+
+    <h2>Basic</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Stats</th>
+                <th>Overall</th>
+                <th>At home</th>
+                <th>At away</th>
+            </tr>
+        </thead>
+    
+        <tbody>
+            <tr *ngFor="let item of details; let index= index">
+
+                <td>{{item['type']['name']}}</td>
+                <td>{{item['value']['all']['percentage'] ? item['value']['all']['percentage'] : 0}}%</td>
+                <td>{{item['value']['home']['percentage']}}%</td>
+                <td>{{item['value']['away']['percentage']}}%</td>
+    
+            </tr>
+        </tbody>
+       
+    </table>
+
+    <h2> average </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stats</th>
+                    <th>Overall</th>
+                    <th>Average</th>
+                    <!-- <th>At away</th> -->
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let item of countAndAvergae; let index= index">
+    
+                    <td>{{item['type']['name']}}</td>
+                    <td>{{item['value']['count']}}</td>
+                    <td>{{item['value']['average']}}</td>
+        
+                </tr>
+            </tbody>
+           
+        </table>
+   
+        <h2> Cards </h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stats</th>
+                    <th>Player</th>
+                    <th>all</th>
+                    <th>Average</th>
+                    <th>coach</th>
+                    <th>coach Average</th>
+                    <!-- <th>At away</th> -->
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr *ngFor="let item of yellowCardsData; let index= index">
+    
+                    <td>{{item['type']['name']}}</td>
+                    
+                    <td>{{item['value']['player_name']}}</td>
+
+                    <td>{{item['value']['count']}}</td>
+                    <td>{{item['value']['average']}}</td>
+                    <td>{{item['value']['coach']}}</td>
+                    <td>{{item['value']['coach_average']}}</td>
+        
+                </tr>
+            </tbody>
+           
+        </table>
+
+</section>
+
+
+</div>

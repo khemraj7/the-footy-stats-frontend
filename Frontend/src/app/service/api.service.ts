@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap } from 'rxjs/operators';
 
@@ -44,4 +44,11 @@ export class ApiService {
   // getAllLeague(id){
   //   return this.http.get("localhost:3000/api/v1/league/1")
   // }
+
+  post(url , body){
+    // return this.http.get(this.base_url +url, { params: queryParams })
+//  console.log('season_id', season_id)
+
+return this.http.post(this.base_url+ url, body)
+  }
 }

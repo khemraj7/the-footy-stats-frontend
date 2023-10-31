@@ -183,6 +183,7 @@ table {
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
+  border: 1px solid;
 }
 
 th {
@@ -200,9 +201,7 @@ td {
   background-color: #F8F7FB;
 }
 
-div {
-  margin: 5px auto;
-}
+
 
 .showAllFixtutre {
   border-radius: 26px;
@@ -531,3 +530,10 @@ div {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {}
+.expandable-content {
+  display: none;
+}
+
+.expandable-content.expanded {
+  display: block;
+}

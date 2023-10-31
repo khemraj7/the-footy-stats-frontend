@@ -1,13 +1,13 @@
 <div class="home_header" *ngIf="!loader">
   <!-- top -->
 
-  <!-- <div class="col-12 home_top m-0 p-0">
+  <div class="col-12 home_top m-0 p-0">
     <img class="w-100" src="../../../../assets/home/Banner.svg" alt="" />
-  </div> -->
+  </div>
 
-  <div id="sportmonks-widget" data-widget="team-next-fixture" data-team="629"
+  <!-- <div id="sportmonks-widget" data-widget="team-next-fixture" data-team="629"
     data-info="RGqkwX4DKuCYPBlZBPI7HFBy2wcoUPOhINjChRUKm/hKlzn8T0jtAXUE2H/JPThUC6uIwLlNz+Kt6iZ370SzuHfa4N1AwOE8QE1WDG3jR5N2DiJv+cxLvTtWBukJmH2sEB9nZUQondrl+47TtQ5ZuL99kyM5lnOM7H1TjgjjpF75CXWHV4SUJ5e5fUHYLcq9bjnAeGx6XceO3kuDdW7LLVYuvFi5/Em9T2jt1Wv4ZxqbWlM2IFMWDS8IRqxum/hofwHXpnw5ZEf/TVZ4yLL1q70OBCdrcqnhQ4OTRA8eIb1H2NEPETZoRvVmYlDJS5I4TQ1JFZa4QKCPd7rXut3UBAr9YXRAptOjPTE5yMeStL/YjPJDdhAKD1fa4NRQvN0p4qZNFtwb7eh62ZeDpMFYH6bqc5ogZmL/Kz9hqZ4OS3AyKtc32NSdP4nsLEomORyU928e1oXd6t+dDLWHHnIhLllkoC59v20GEAUiWiFDym4mbj161O18XZKL4jcWx1Sx8RBGsaRYIUCH+N/2tAlNFP03iZtGl8ZZV5teHdbFmz6OvG+HgAHqTDSDeTbnmqBaOTU5df7zKRXGIXthFWUWnSV442AeATRKDlNcytwvb7gzpUnifGC41spK8Syfpj0FghYaWz6l0N+VAN43wuN5vYoabALSLkFa8OAsL60o9vI="
-    data-colors="#448EE4,#182957,#D0D0D9,#343353"></div>
+    data-colors="#448EE4,#182957,#D0D0D9,#343353"></div> -->
 
 
 
@@ -16,24 +16,24 @@
     <!-- section -->
 
 
-    <div id="sportmonks-widget" data-widget="livescore"
+    <!-- <div id="sportmonks-widget" data-widget="livescore"
       data-info="qqI2A6akjNlonV821HrtnU5P0YSZuPyBCIf3wp4pyNE72ZrYLp7WQuMftevKoyH3v/uQ3CxJiQmCP80phwl6MyJB7IDA2AaAW6WLgNTb9Twfed6jQomnacZTtj62zOqPO2lMBYPjoLyoQm+HS+MM4v8P9r6Bm1bQgI0PtZ3VRspe46u+5VguRoG+YiEj3rY3s/KOQ5Ymrznq0MS1KxcfXFpElbCLth7Rj7Mt0C2U2nHuAKKCJUXoVB8GAk4dek5PJjwGBb4XKuKbglGVKVT3CiYLjKO+0RBNUpJdzMCAm2Q6VxeOm0rGQDS6SNUN0PympYK8iyb3givaqWztWLbS3D49y4pqkITIPoX7MqP99b8Dx7tfmSTqiYU9lKcPTkIUdJJhjrogxHRk9fIZdynj6L5PN7jTY1amMUV7miAuQrpb47ZUZzuItgjGxgm3h8ghc6Oh2jRhG3ISLU7c/cGnuEdqFE5BhyMlXeizy/9+rSPyGB2HnsGvvnd5VvXnpewLReOSlrro2wwOT2Re59zG887G2hmGAVEcHSyzXoj+iZjPE1y+JZWbu+dZ6RMeb9EWdQ0LXk4r1+WbSLfKlOpcjzv1AMDQ2eStZcBpZ4MI08ttWyXWpXCg0WQ0/Zi1hDXQyhzcCu9dlB/gwr1aWBe8C5cLteAyzX4ha68pMverMyw="
-      data-colors="#448EE4,#182957,#D0D0D9,#343353" data-matchcenter="true"></div>
+      data-colors="#448EE4,#182957,#D0D0D9,#343353" data-matchcenter="true"></div> -->
 
-    <!-- <section class="mt-2 mb-2">
+    <section class="mt-2 mb-2">
       <div class=" col-12 d-flex flex-wrap mt-4">
         <div class="col-1"></div>
         <div class="col-10 text-center">
           <mat-tab-group class="equal-width" dynamicHeight selectedIndex="1"
             (selectedTabChange)="takeEvent($event)">
             <div *ngFor="let day of days">
-              <mat-tab label={{day}}>
+              <mat-tab label={{day}} >
                 <div class="col-12 flex flex-wrap mt-5 mb-5 scoreData"
-                  *ngFor="let data of scoreData; let index;last as isLast">
+                  *ngFor="let data of allFixtures; let index;last as isLast">
                   <div class="col-12 d-flex">
-                    <div class="col-6 text-start">
-                      <img src="../../../../assets/flags/spain.svg" alt="spain"> &nbsp;
-                      <span>Spain - Segunda Divisioń B</span>
+                    <div class="col-6 text-start"  >
+                    <img [src]="data['league']['image_path']" style="width: 22px;" alt="image"> 
+                      <span > {{data['league']['name']}} </span>
                       <img src="../../../../assets/fluent_bookmark-20-filled.svg" alt="bookmark">
                     </div>
                     <div class="col-6 text-end">
@@ -43,32 +43,40 @@
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 600;
-                    line-height: normal;">8th | 20:30 &nbsp; <svg width="12" height="7"
+                    line-height: normal;">{{data['starting_at'] | date:'hh:mm a'}}
+                     <!-- &nbsp; <svg width="12" height="7"
                           viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M1 1L6 6L11 1" stroke="#182957" stroke-linecap="round"
                             stroke-linejoin="round" />
-                        </svg>
+                        </svg> -->
                       </span>
                     </div>
                   </div>
 
                   <table class="col-12">
                     <tr>
-                      <th class="text-start"> home</th>
+                      <th class="text-start"> Start</th>
+                      <th class="text-end"> Home</th>
                       <th class="text-end" style="width : 240px">Form</th>
                       <th style="width: 100px;"></th>
                       <th class="text-end" style=" width: 80px;">Form</th>
                       <th class="text-start">Away</th>
                       <th></th>
-                      <th>odds</th>
+                      <th class="text-end"> Result</th>
 
                     </tr>
-
-                    <tr>
-                      <td class="text-start">Real Madrid II</td>
-                      <td class="text-end" style="width: 275px;">
-                        <span>11:00PM - Starts in 2 hr’</span>
-                        &nbsp;&nbsp;
+                    <!-- [routerLink]="'/leagues/leagues/' + data['league_id']" -->
+                    <tr >
+                    
+                      <td class="text-start" style="width: 275px;">
+                        <span> {{data['starting_at'] | date}} </span>
+                        
+                      </td>
+                      <td class="text-end" [routerLink]="'/home/teamStats/' + data['participants'][0]['id']" [queryParams]="{league_id : data['league_id'], season_id: data['season_id']}">
+                        <img [src]="data['participants'][0]['image_path']" alt="" style="width: 20px;">
+                        &nbsp;
+                        {{data['participants'][0]['name']}} </td>
+                      <td class="text-end"> 
                         <span style="    border-radius: 5px;
                     background: #C6B3E2;
                     width: 50px;
@@ -82,8 +90,7 @@
                               d="M4.5 16.5C4.0875 16.5 3.73425 16.353 3.44025 16.059C3.14625 15.765 2.9995 15.412 3 15V7.5C3 7.0875 3.147 6.73425 3.441 6.44025C3.735 6.14625 4.088 5.9995 4.5 6H5.25V4.5C5.25 3.4625 5.61575 2.578 6.34725 1.8465C7.07875 1.115 7.963 0.749501 9 0.750001C10.0375 0.750001 10.922 1.11575 11.6535 1.84725C12.385 2.57875 12.7505 3.463 12.75 4.5V6H13.5C13.9125 6 14.2658 6.147 14.5598 6.441C14.8538 6.735 15.0005 7.088 15 7.5V15C15 15.4125 14.853 15.7657 14.559 16.0597C14.265 16.3537 13.912 16.5005 13.5 16.5H4.5ZM9 12.75C9.4125 12.75 9.76575 12.603 10.0598 12.309C10.3538 12.015 10.5005 11.662 10.5 11.25C10.5 10.8375 10.353 10.4843 10.059 10.1902C9.765 9.89625 9.412 9.7495 9 9.75C8.5875 9.75 8.23425 9.897 7.94025 10.191C7.64625 10.485 7.4995 10.838 7.5 11.25C7.5 11.6625 7.647 12.0157 7.941 12.3097C8.235 12.6038 8.588 12.7505 9 12.75ZM6.75 6H11.25V4.5C11.25 3.875 11.0313 3.34375 10.5938 2.90625C10.1563 2.46875 9.625 2.25 9 2.25C8.375 2.25 7.84375 2.46875 7.40625 2.90625C6.96875 3.34375 6.75 3.875 6.75 4.5V6Z"
                               fill="white" />
                           </svg>
-                        </span>
-                      </td>
+                        </span></td>
                       <td class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                           height="16" viewBox="0 0 16 16" fill="none">
                           <path
@@ -91,7 +98,7 @@
                             fill="#3E019E" />
                         </svg>
                         <br>
-                        <span>stats</span>
+                        <span>vs</span>
                       </td>
                       <td class="text-end">
                         <span style="    border-radius: 5px;
@@ -109,11 +116,17 @@
                           </svg>
                         </span>
                       </td>
-                      <td class="text-start">CD Eldense</td>
+                      <td class="text-end" [routerLink]="'/home/teamStats/' + data['participants'][1]['id']" [queryParams]="{league_id : data['league_id'], season_id: data['season_id']}">
+                        <img [src]="data['participants'][1]['image_path']" alt="" style="width: 20px;">
+                        &nbsp;
+                        {{data['participants'][1]['name']}} </td>
+
                       <td>
 
                       </td>
-                      <td class="d-flex justify-content-between align-items-center"> <span><svg
+                      <td class=" align-items-center text-end"> 
+                        <span> {{data['result_info']}} </span>
+                        <!-- <span><svg
                             xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             viewBox="0 0 16 16" fill="none">
                             <path
@@ -131,17 +144,17 @@
                             <path
                               d="M3.99996 14.667C3.63329 14.667 3.31929 14.5363 3.05796 14.275C2.79663 14.0137 2.66618 13.6999 2.66663 13.3337V6.66699C2.66663 6.30033 2.79729 5.98633 3.05863 5.72499C3.31996 5.46366 3.63374 5.33321 3.99996 5.33366H4.66663V4.00033C4.66663 3.0781 4.99174 2.29188 5.64196 1.64166C6.29218 0.991437 7.07818 0.666548 7.99996 0.666993C8.92218 0.666993 9.70841 0.992104 10.3586 1.64233C11.0089 2.29255 11.3337 3.07855 11.3333 4.00033V5.33366H12C12.3666 5.33366 12.6806 5.46433 12.942 5.72566C13.2033 5.98699 13.3337 6.30077 13.3333 6.66699V13.3337C13.3333 13.7003 13.2026 14.0143 12.9413 14.2757C12.68 14.537 12.3662 14.6674 12 14.667H3.99996ZM7.99996 11.3337C8.36663 11.3337 8.68063 11.203 8.94196 10.9417C9.20329 10.6803 9.33374 10.3665 9.33329 10.0003C9.33329 9.63366 9.20263 9.31966 8.94129 9.05833C8.67996 8.79699 8.36618 8.66655 7.99996 8.66699C7.63329 8.66699 7.31929 8.79766 7.05796 9.05899C6.79663 9.32033 6.66618 9.6341 6.66663 10.0003C6.66663 10.367 6.79729 10.681 7.05863 10.9423C7.31996 11.2037 7.63374 11.3341 7.99996 11.3337ZM5.99996 5.33366H9.99996V4.00033C9.99996 3.44477 9.80552 2.97255 9.41663 2.58366C9.02774 2.19477 8.55552 2.00033 7.99996 2.00033C7.44441 2.00033 6.97218 2.19477 6.58329 2.58366C6.19441 2.97255 5.99996 3.44477 5.99996 4.00033V5.33366Z"
                               fill="#A4A4A4" />
-                          </svg></span>
+                          </svg></span> -->
                       </td>
 
                     </tr>
                   </table>
 
-                  <div class="col-12 text-start">
+                  <!-- <div class="col-12 text-start">
                     <a href="">Buy Premium Stats &nbsp;
                       <img src="../../../../assets/fluent_arrow-eject-20-filled.svg" alt="">
                     </a>
-                  </div>
+                  </div> -->
 
                   <hr class="col-12" *ngIf="!isLast">
                   <div class="col-12 d-flex" *ngIf="isLast">
@@ -167,7 +180,7 @@
         </div>
         <div class="col-1"></div>
       </div>
-    </section> -->
+    </section>
 
     <section class="mt-2 mb-2">
       <div class="col-12 text-center footaballPicture">
@@ -689,30 +702,26 @@
           <div class="col-12 completedFixture mt-3 mb-3">
             <img src="../../../../assets/bx_stats.svg" alt=""> &nbsp; <span>Player Statistics</span>
           </div>
-          <div class="col-12 p-0 ">
-            <div id="sportmonks-widget" data-widget="league-topscorers"
+          <div class="col-12 p-0 d-flex">
+            <!-- <div id="sportmonks-widget" data-widget="league-topscorers"
               data-info="KsUMhSlzxqh0eZZmQPpjvRsZeEwZAbcFXzdQdoxf3Y3CMtEg8nQkG7zhmgWEssPziedel4732sxLKHRs7fjVjNYVxc467Pwfimr4hM3a0/ZDVMGbwG2l3adEX2nUe8LknmP4HkqGJ76HIeUsHoAOR0W0usyxyRQyiomWv98IIf++byPNrIJiZYveDA0MidEL4lTbvMBrjVLpasC39NY+DeQJlQzlyiIj38xRegBuZ5RyWU19tQJMmAn6FQ831UsczqbfXRqXGYyL3chihq+2KLJtEqbQCkSfNfpwzE7wBdJOkV/t9TSwXhjVoVaoQW39OHQTcxnjhT3npSK65HIwla+tMv8lskTOyRCfv0GWmuSCMcGFD3DCR/YfdzFZ74rfQ+dHxO//FOceR/bbFFNebI8TbW7uMWOj0K6sl7X2jQVuugs9tTvyTDiJ8geg5B8X7igC6UiIMQ5/xiLt2dJFIrUoKySJ/LcBqerEf2f0Lxl8I5YDjTg1k/321VxXpZbQ3yzUJd5/7K1Cge3soVCsOJOvhfZ8D7DfiWsgq2dhd/dX2zTZQklLRabUxq99vVjCvMFjHzg6WW23R3CfY+ylSh5FCM5HjGkZ17geMXlXa4ewva4Ge9Y8/KUL+d34lvOLz10CyOgbFNmIdOsFvbzPnHYLUjzg2GNTsKzLJpGNWyQ="
-              data-league="72" data-colors="#448EE4,#182957,#D0D0D9,#343353"></div>
-            <!-- <div class="col-6 card leaguesData" *ngFor="let league of leaguesData1">
+              data-league="72" data-colors="#448EE4,#182957,#D0D0D9,#343353"></div> -->
+            <!-- <div class="col-12 card leaguesData" *ngFor="let league of leaguesData1">
               <span class="title">
                 <img src="../../../../assets/bx_stats (1).svg" alt=""> &nbsp;
                 {{league.title}}</span>
-              <mat-list *ngFor="let list of league.lists;last as isLast">
+              <mat-list *ngFor="let player of playersStats;last as isLast">
 
                 <mat-list-item>
-                  <img *ngIf="list.image == 'line1' || list.image == 'line2'  "
-                    src="../../../../assets/flags/Frame 15 (1).svg" alt=""> <span
-                    *ngIf="list.image == 'line1' || list.image == 'line2'">&nbsp;</span>
-                  <img
-                    *ngIf="list.image == 'line3' || list.image == 'line4' || list.image == 'line5' || list.image == 'line6'  "
-                    src="../../../../assets/flags/Frame 28.svg" alt=""> &nbsp;
+                  <img [src]="player['image_path']" alt="" style="    width: 40px;
+                  /* border: 1px solid; */
+                  border-radius: 50%;
+                  padding: 3px;
+              "> &nbsp;
+            
                   <span>
-                    <span> {{list.line1}} <span class="goalsData">36 goals</span></span>
-                    <span> {{list.line2}}</span>
-                    <span> {{list.line3}}</span>
-                    <span> {{list.line4}}</span>
-                    <span> {{list.line5}}</span>
-                    <span> {{list.line6}}</span>
+                    <span> {{player['display_name']}} <span class="goalsData">36 goals</span></span>
+                  
                   </span>
 
 
@@ -724,6 +733,41 @@
               </mat-list>
 
             </div> -->
+
+            <table class="mb-4">
+              <thead>
+                  <tr>
+                      <th>S No</th>
+                      <th>Name</th>
+                      <th>Country</th>
+                      <th>Date of Birth</th>
+                      <!-- <th>Last Played</th>
+                      <th>Details</th>
+                      <th>Duration</th> -->
+                   
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let player of playersStats; let i = index" class="card-row" style="    margin: 10px 0;
+              border: 1px solid;">
+                      <td data-label="S No">{{i + 1}}</td>
+                      <td data-label="Name"> <img [src]="player['image_path']" alt="" style="    width: 40px;
+                        /* border: 1px solid; */
+                        border-radius: 50%;
+                        padding: 3px;
+                    "> &nbsp; {{player['display_name']}}</td>
+                      <td data-label="Country"> <img [src]="player['country']['image_path']" alt="" style="    width: 40px;
+                        /* border: 1px solid; */
+                        /* border-radius: 50%; */
+                        padding: 3px;
+                    "> &nbsp;{{player['country']['name']}}</td>
+                      <td data-label="Date of Birth">{{player['date_of_birth']}}</td>
+
+                
+                  </tr>
+  
+              </tbody>
+          </table>
           </div>
 
         </div>
@@ -778,9 +822,45 @@
               </mat-list>
 
             </div> -->
+
+            <table class="mb-4">
+              <thead>
+                  <tr>
+                      <th>S No</th>
+                      <th>Team</th>
+                      <th>Country</th>
+                      <th>Last played</th>
+                      <!-- <th>Last Played</th>
+                      <th>Details</th>
+                      <th>Duration</th> -->
+                   
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let team of teamStatistics; let i = index" class="card-row" style="    margin: 10px 0;
+              border: 1px solid;">
+                      <td data-label="S No">{{i + 1}}</td>
+                      <td data-label="Name"> <img [src]="team['image_path']" alt="" style="    width: 40px;
+                        /* border: 1px solid; */
+                        border-radius: 50%;
+                        padding: 3px;
+                    "> &nbsp; {{team['name']}}</td>
+                      <td data-label="Country"> <img [src]="team['country']['image_path']" alt="" style="    width: 40px;
+                        /* border: 1px solid; */
+                        /* border-radius: 50%; */
+                        padding: 3px;
+                    "> &nbsp;{{team['country']['name']}}</td>
+                      <td data-label="Date of Birth">{{team['last_played_at'] | date }}</td>
+
+                
+                  </tr>
+  
+              </tbody>
+          </table>
+
           </div>
         </div>
-        <div class="col-1 d-none d-md-none d-lg-block"></div>
+        <div classx ="col-1 d-none d-md-none d-lg-block"></div>
 
         <hr class="col-12 mt-3 mb-3">
       </div>
@@ -943,7 +1023,32 @@
     </section>
   </div>
 
-
+<section>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>
+          {{ item.name }}
+          <div class="expandable-content" [ngClass]="{'expanded': item.expanded}">
+            <!-- Add expandable content here -->
+            Expanded content for {{ item.name }}
+          </div>
+        </td>
+        <td>
+          <button (click)="toggleRow(item)">{{ item.expanded ? 'Collapse' : 'Expand' }}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+</section>
 
 </div>
 <app-loader *ngIf="loader"></app-loader>

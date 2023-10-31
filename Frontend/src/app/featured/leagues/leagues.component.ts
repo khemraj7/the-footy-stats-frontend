@@ -310,5 +310,7 @@ this.getAllLeagues(this.currentPage)
     return startingIndex + index;
   }
 
+
+
 }
 

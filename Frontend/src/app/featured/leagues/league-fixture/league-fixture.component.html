@@ -77,6 +77,65 @@ color: #fff;">Upcoming fixture</h2>
     *ngIf="leagueData['upcoming'].length == 0">
     <h2>No upcoming fixture ..</h2>
   </div>
+
+  <h2 class="mt-2 mb-2 text-center" style="    background: #448EE4;
+  padding: 3px 0;
+  border-radius: 5px;
+  color: #fff;">Seasons</h2>
+  <div *ngIf="leagueData['seasons'].length > 0">
+    <table class="mb-4">
+      <thead>
+        <tr>
+          <th>S No</th>
+          <!-- <th>ID</th> -->
+          <!-- <th>Sport ID</th> -->
+          <!-- <th>League ID</th> -->
+          <!-- <th>Season ID</th> -->
+          <!-- <th>Stage ID</th> -->
+          <!-- <th>Group ID</th> -->
+          <!-- <th>Round ID</th> -->
+          <!-- <th>State ID</th> -->
+          <!-- <th>Venue ID</th> -->
+          <th>Name</th>
+          <th>Starting At</th>
+          <th>Ending At</th>
+          <th>Standings Recalculated A</th>
+          <th></th>
+          <!-- <th>Details</th>
+          <th>Duration</th> -->
+          <!-- <th>Placeholder</th> -->
+          <!-- <th>Has Odds</th> -->
+          <!-- <th>Starting At Timestamp</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of leagueData['seasons']; let i = index" class="card-row" style="    margin: 10px 0;
+        border: 1px solid;">
+          <td data-label="S No" >{{i + 1}}</td>
+          <!-- <td data-label="ID">{{data['id']}}</td> -->
+          <!-- <td data-label="Sport ID">{{data['sport_id']}}</td>
+                <td data-label="League ID">{{data['league_id']}}</td>
+                <td data-label="Season ID">{{data['season_id']}}</td>
+                <td data-label="Stage ID">{{data['stage_id']}}</td>
+                <td data-label="Group ID">{{data['group_id']}}</td>
+                <td data-label="Round ID">{{data['round_id']}}</td>
+                <td data-label="State ID">{{data['state_id']}}</td>
+                <td data-label="Venue ID">{{data['venue_id']}}</td> -->
+          <td data-label="Name" >{{data['name']}}</td>
+          <td data-label="Starting At">{{data['starting_at']}} 
+          </td>
+          <td data-label="Ending At">{{data['ending_at'] }}</td>
+
+           <td data-label="Standings Recalculated At">{{data['standings_recalculated_at']}}</td>
+           <td style="cursor: pointer;" [routerLink]="'/leagues/season/' + data['id']"><button class="btn custom-button next-button">visit</button></td>
+       
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
 </div>
 
 <app-loader *ngIf="loader"></app-loader>

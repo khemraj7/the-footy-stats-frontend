@@ -1,0 +1,151 @@
+<div class="container" *ngIf="!loader">
+    <div class="mt-3 mb-3">
+        <span style="font-size: 24px; font-weight: 600;"> {{ seasonData['name']}}</span>
+
+
+    </div>
+    <h2 class="mt-2 mb-2 text-center" style="    background: #448EE4;
+  padding: 3px 0;
+  border-radius: 5px;
+  color: #fff;">Teams</h2>
+
+    <mat-accordion>
+        <mat-expansion-panel class="panel mt-2 mb-2" *ngFor="let team of seasonData['teams']; let index = index"
+            (opened)="onHover(team['id'])">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <span> {{ index+1 }}.</span> &nbsp;&nbsp; <span> <span> {{ team['name'] }}</span></span>
+                </mat-panel-title>
+                <!-- <mat-panel-description>
+          Points:
+        </mat-panel-description> -->
+            </mat-expansion-panel-header>
+            <mat-spinner style="width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;" *ngIf="loaderTeam" ></mat-spinner>
+            <div *ngIf="!loaderTeam">
+                <div *ngIf="team['show']">
+                    <div class="col-12" style="padding: 5px 12px;">
+                        <span style="cursor: pointer;"><img style="    width: 30px;
+            border: 1px solid #ccc;
+            border-radius: 100%;
+            height: 30px;
+            padding: 4px;
+            cursor: pointer;
+        " [src]="teamDetail['image_path']" alt=""> &nbsp; <span style="cursor: pointer;"
+                                (click)="teamData = !teamData">{{teamDetail['name']}}</span> <span
+                                style="float: right;">{{teamDetail['last_played_at']}} </span></span>
+                    </div>
+
+                    <div *ngIf="teamDetail['statistics'].length > 0">
+                        <div style="position: relative; " *ngIf="teamDetail['statistics'][0]['details'].length > 0">
+                            <table class="mb-4">
+                                <thead>
+                                    <tr>
+                                        <th>S No</th>
+                                        <th>Name</th>
+                                        <th>count</th>
+                                        <th>average</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let detail of teamDetail['statistics'][0]['details']; let i = index"
+                                        class="card-row" style="    margin: 10px 0;
+                border: 1px solid;">
+                                        <td data-label="S No">{{i + 1}}</td>
+                                        <td data-label="Name">{{detail['type']['name']}}</td>
+                                        <td data-label="Count">{{detail['value']['count'] ?? '-'}}</td>
+                                        <td data-label="Average">{{detail['value']['average'] ?? '-'}}</td>
+
+
+
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <h2 class="mt-2 mb-2 text-center" style="    background: #448EE4;
+  padding: 3px 0;
+  border-radius: 5px;
+  color: #fff;">Fixtures</h2>
+    <div *ngIf="seasonData['fixtures'].length > 0">
+        <table class="mb-4">
+            <thead>
+                <tr>
+                    <th>S No</th>
+                    <!-- <th>ID</th> -->
+                    <!-- <th>Sport ID</th> -->
+                    <!-- <th>League ID</th> -->
+                    <!-- <th>Season ID</th> -->
+                    <!-- <th>Stage ID</th> -->
+                    <!-- <th>Group ID</th> -->
+                    <!-- <th>Round ID</th> -->
+                    <!-- <th>State ID</th> -->
+                    <!-- <th>Venue ID</th> -->
+                    <th>Name</th>
+                    <th>Starting At</th>
+                    <th>Result Info</th>
+                    <th>Leg</th>
+                    <th>Details</th>
+                    <th>Duration</th>
+                    <!-- <th>Placeholder</th> -->
+                    <!-- <th>Has Odds</th> -->
+                    <!-- <th>Starting At Timestamp</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of seasonData['fixtures']; let i = index" class="card-row" style="    margin: 10px 0;
+            border: 1px solid;">
+                    <td data-label="S No">{{i + 1}}</td>
+                    <!-- <td data-label="ID">{{data['id']}}</td> -->
+                    <!-- <td data-label="Sport ID">{{data['sport_id']}}</td>
+                    <td data-label="League ID">{{data['league_id']}}</td>
+                    <td data-label="Season ID">{{data['season_id']}}</td>
+                    <td data-label="Stage ID">{{data['stage_id']}}</td>
+                    <td data-label="Group ID">{{data['group_id']}}</td>
+                    <td data-label="Round ID">{{data['round_id']}}</td>
+                    <td data-label="State ID">{{data['state_id']}}</td>
+                    <td data-label="Venue ID">{{data['venue_id']}}</td> -->
+                    <td data-label="Name">{{data['name']}}</td>
+                    <td data-label="Starting At">{{data['starting_at'] | date}} &nbsp; {{data['starting_at'] |
+                        date:'hh:mm a'}}
+                    </td>
+                    <td data-label="Result Info">{{data['result_info'] ? data['result_info'] : 'N/A'}}</td>
+                    <td data-label="Leg">{{data['leg']}}</td>
+                    <td data-label="Details">{{data['details'] ? data['details'] : 'N/A'}}</td>
+                    <td data-label="Length">{{data['length']}} Min</td>
+                    <!-- <td data-label="Placeholder">{{data['placeholder']}}</td>
+                    <td data-label="Has Odds">{{data['has_odds']}}</td> -->
+                    <!-- <td data-label="Starting At Timestamp">{{data['starting_at_timestamp']}}</td> -->
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
+
+<app-loader *ngIf="loader"></app-loader>
+
+
+
+<app-footer></app-footer>
