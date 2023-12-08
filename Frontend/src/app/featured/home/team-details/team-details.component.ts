@@ -54,6 +54,8 @@ export class TeamDetailsComponent implements OnInit {
   // }
 
   getTeamDetails(teamId, season_id) {
+    debugger
+    console.log(teamId,"tea,mIddddddddd");
     const body = {
       seasonId: season_id,
     };
@@ -163,7 +165,9 @@ export class TeamDetailsComponent implements OnInit {
      filter.length = 2
      console.log('filter:::::::::::', filter)
       this.leaguesData['upcoming'] =  this.leaguesData['upcoming'].length =2
-      this.UpcomingFixtures = filter
+      if(filter){
+        this.UpcomingFixtures = filter
+      }
     });
   }
 

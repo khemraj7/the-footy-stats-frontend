@@ -1,0 +1,82 @@
+
+<div class="container">
+    <h2>Seasons based goals average</h2>
+    <div >
+        <table >
+            <tr class="customWhtiteSpace customTD">
+                <th>All</th>
+                <th>Home</th>
+                <th>Away</th>
+            </tr>
+            <tr *ngFor="let data of dataObj['goals'] " class="customWhtiteSpace customTD">
+                <td >{{ data && data.all && data.all.average ? data.all.average:  "-"}}</td>
+                <td >{{ data && data.all && data.home.average ? data.home.average: "-"}}</td>
+                <td >{{ data && data.all && data.away.average ? data.away.average : "-"}}</td>
+            </tr> 
+        </table>
+    </div>
+
+
+
+    <h2>Seasons based team-wins</h2>
+    <div >
+        <table >
+            <tr class="customWhtiteSpace customTD">
+                <th>All</th>
+                <th>Home</th>
+                <th>Away</th>
+            </tr>
+            <tr *ngFor="let data of dataObj['team-wins'] " class="customWhtiteSpace customTD">
+                <td >{{data && data.all && data.all.percentage ?data.all.percentage :"-"}}</td>
+                <td >{{ data && data.all && data.home.percentage  ? data.home.percentage:"-"}}</td>
+                <td >{{data && data.all && data.away.percentage ? data.away.percentage :"-"}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+    <h2>Seasons based scoring-minutes</h2>
+    <div >
+        <table >
+            <tr class="customWhtiteSpace customTD">
+                <th>0-15</th>
+                <th>15-30</th>
+                <th>30-45</th>
+                <th>45-60</th>
+                <th>60-75</th>
+                <th>70-90</th>
+            </tr>
+            <tr *ngFor="let data of dataObj['scoring-minutes'] " class="customWhtiteSpace customTD">
+                <td >{{data && data['0-15'] && data['0-15'].count ?data['0-15'].count :"-"}}</td>
+                <td >{{data && data['15-30'] && data['15-30'].count ?data['15-30'].count :"-"}}</td>
+                <td >{{data && data['30-45'] && data['30-45'].count ?data['30-45'].count :"-"}}</td>
+                <td >{{data && data['45-60'] && data['45-60'].count ?data['45-60'].count :"-"}}</td>
+                <td >{{data && data['60-75'] && data['60-75'].count ?data['60-75'].count :"-"}}</td>
+                <td >{{data && data['75-90'] && data['75-90'].count ?data['75-90'].count :"-"}}</td>
+              
+            </tr>
+        </table>
+    </div>
+
+
+    <h2>Seasons based penalties</h2>
+
+    <div >
+        <table >
+            <tr class="customWhtiteSpace customTD">
+                <th>Scored</th>
+                <th>Missed</th>
+                <th>Conversion rate</th>
+
+            </tr>
+            <tr *ngFor="let data of dataObj['penalties'] " class="customWhtiteSpace customTD">
+                <td >{{data && data['scored'] && data['scored'] ? data['scored']:"-"}}</td>
+                <td >{{ data && data['missed']  ? data['missed']:"-"}}</td>
+                <td >{{data && data.conversion_rate && data.conversion_rate ?data.conversion_rate :"-"}}</td>
+
+            </tr>
+        </table>
+    </div>
+
+</div>
+
